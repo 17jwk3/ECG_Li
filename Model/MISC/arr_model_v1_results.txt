@@ -1,0 +1,16 @@
+Model Predict
+Train
+AUC:0.962
+Accuracy:0.898
+Recall:0.869
+Precision:0.919
+Specificity:0.926
+Prevalence:0.491
+
+Valid
+AUC:0.955
+Accuracy:0.893
+Recall:0.865
+Precision:0.910
+Specificity:0.919
+Prevalence:0.486

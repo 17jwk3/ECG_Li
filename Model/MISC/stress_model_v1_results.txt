@@ -1,0 +1,27 @@
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ dense (Dense)               (None, 16)                272
+
+ dense_1 (Dense)             (None, 12)                204
+
+ dense_2 (Dense)             (None, 3)                 39
+
+=================================================================
+Total params: 515
+Trainable params: 515
+Non-trainable params: 0
+_________________________________________________________________
+None
+Training Predict
+8200/8200 [==============================] - 36s 4ms/step
+Accuracy:0.660
+Recall:0.628
+Precision:0.653
+ 
+Validation Predict
+4039/4039 [==============================] - 12s 3ms/step
+Accuracy:0.660
+Recall:0.629
+Precision:0.653

@@ -1,0 +1,24 @@
+Model V2 Built
+Model V2 Compiled
+Model V2 Fitted
+Training Prediction
+              precision    recall  f1-score   support
+
+           0      1.000     1.000     1.000    142472
+           1      1.000     1.000     1.000    142537
+           2      1.000     1.000     1.000    141915
+
+    accuracy                          1.000    426924
+   macro avg      1.000     1.000     1.000    426924
+weighted avg      1.000     1.000     1.000    426924
+
+Validation Prediction
+              precision    recall  f1-score   support
+
+           0      1.000     1.000     1.000     69928
+           1      1.000     1.000     1.000     69863
+           2      1.000     1.000     1.000     70485
+
+    accuracy                          1.000    210276
+   macro avg      1.000     1.000     1.000    210276
+weighted avg      1.000     1.000     1.000    210276
