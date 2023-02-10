@@ -1,0 +1,35 @@
+Model V4 Built
+Model V4 Compiled
+Model V4 Fitted
+Training Prediction
+              precision    recall  f1-score   support
+
+           0      0.454     0.483     0.468     41695
+           1      0.614     0.485     0.542     41546
+           2      0.556     0.638     0.594     41489
+
+    accuracy                          0.535    124730
+   macro avg      0.541     0.535     0.535    124730
+weighted avg      0.541     0.535     0.535    124730
+
+Validation Prediction
+              precision    recall  f1-score   support
+
+           0      0.449     0.483     0.465     20360
+           1      0.618     0.479     0.540     20509
+           2      0.558     0.641     0.596     20566
+
+    accuracy                          0.534     61435
+   macro avg      0.542     0.534     0.534     61435
+weighted avg      0.542     0.534     0.534     61435
+
+Testing Prediction
+              precision    recall  f1-score   support
+
+           0      0.809     0.825     0.817     29520
+           1      0.188     0.127     0.152      8722
+           2      0.512     0.695     0.590      6240
+
+    accuracy                          0.670     44482
+   macro avg      0.503     0.549     0.519     44482
+weighted avg      0.645     0.670     0.654     44482

@@ -4,21 +4,32 @@ Model V2 Fitted
 Training Prediction
               precision    recall  f1-score   support
 
-           0      1.000     1.000     1.000    142472
-           1      1.000     1.000     1.000    142537
-           2      1.000     1.000     1.000    141915
+           0      1.000     1.000     1.000     41695
+           1      1.000     1.000     1.000     41546
+           2      1.000     1.000     1.000     41489
 
-    accuracy                          1.000    426924
-   macro avg      1.000     1.000     1.000    426924
-weighted avg      1.000     1.000     1.000    426924
+    accuracy                          1.000    124730
+   macro avg      1.000     1.000     1.000    124730
+weighted avg      1.000     1.000     1.000    124730
 
 Validation Prediction
               precision    recall  f1-score   support
 
-           0      1.000     1.000     1.000     69928
-           1      1.000     1.000     1.000     69863
-           2      1.000     1.000     1.000     70485
+           0      1.000     1.000     1.000     20360
+           1      1.000     1.000     1.000     20509
+           2      1.000     1.000     1.000     20566
 
-    accuracy                          1.000    210276
-   macro avg      1.000     1.000     1.000    210276
-weighted avg      1.000     1.000     1.000    210276
+    accuracy                          1.000     61435
+   macro avg      1.000     1.000     1.000     61435
+weighted avg      1.000     1.000     1.000     61435
+
+Testing Prediction
+              precision    recall  f1-score   support
+
+           0      0.679     0.638     0.658     29520
+           1      0.269     0.262     0.265      8722
+           2      0.153     0.203     0.174      6240
+
+    accuracy                          0.503     44482
+   macro avg      0.367     0.367     0.366     44482
+weighted avg      0.525     0.503     0.513     44482

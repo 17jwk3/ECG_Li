@@ -13,11 +13,12 @@ import os
 # Global Parameters
 num_sec = 3 #recording duration / 2
 sample_rt = 360 #sample frequency
-os.chdir("C:\\Users\\kocha\\Documents\\Queen's\\Year 4\\ELEC498\\ECG_Li\\Model") #Path to project location
+os.chdir("C:\\Users\\kocha\\Documents\\Queen's\\Year 4\\ELEC498\\ECG_Li\\Models and Prediction") #Path to project location
 
 # Importing Data
 data = os.getcwd() + '/arrhythmia_database/'
-patients = np.loadtxt("arrhythmia_database/RECORDS", dtype=str)
+train_val_set = np.loadtxt("arrhythmia_database/RECORDS", dtype=str)
+test_set = np.loadtxt("arrhythmia_database/RECORDS_TEST", dtype=str)
 
 nonbeat = [
             'Q',                            #Unclassifiable beat
@@ -68,8 +69,8 @@ normal = [
             'N'                                     #Normal beat
          ]    
 
-def check_symbols():
-# Check signal annotations in dataset
+def check_symbols(set_name):
+# Check signal annotations in train_val or test dataset
 
     #r_test = wfdb.rdrecord(data + '100')
     #a_test = wfdb.rdann(data + '100', 'atr')
@@ -80,7 +81,7 @@ def check_symbols():
 
     symbols_df = pd.DataFrame()
     # Reading all annotation files (.atr)
-    for pts in patients:
+    for pts in set_name:
         # Generating filepath for all .atr file names
         file = data + pts
         # Saving annotation object
@@ -146,7 +147,7 @@ def get_sequences(ecg_signal, beats, num_cols):
     
     return X, Y, beat_symbols
 
-def make_dataset():
+def make_dataset(test_dataset = False):
 # Makes the dataset of all patients (ignoring non-beats annotations)
 # output: 
 #   X_all   = ecg signal                (nbeats rows, [num_sec * 2 * sample_rt] columns)
@@ -159,6 +160,10 @@ def make_dataset():
     X_all = np.zeros((1,num_cols))
     Y_all = np.zeros((1,1))
     symbols = []
+
+    if test_dataset is False:
+        patients = train_val_set
+    else: patients = test_set
 
     for patient in patients:
         # Get the path to extract patient X's info
@@ -212,7 +217,7 @@ def plot_heartbeat(plot_beat = 'N'):
     # Plot the ecg signal of desired heart beat type
     # Default argument is of a normal beat
 
-    for patient in patients:
+    for patient in train_val_set:
         # Get the path to extract patient X
         file = data + patient
 
@@ -260,16 +265,22 @@ def plot_distribution():
     return
 
 # Create the datasets
-# X_all, Y_all, symbols = make_dataset()
+#X_all, Y_all, symbols = make_dataset(test_dataset = False)
 
 # Save the datasets
-# np.savez_compressed('arr_data',a=X_all, b=Y_all, c=symbols)
+#np.savez_compressed('arr_data_train_val',a=X_all, b=Y_all, c=symbols)
 
 # Import datasets for visualization
-training_data = np.load('arr_data.npz')
+training_data = np.load('arr_data_train_val.npz')
 X_all = training_data['a']
 Y_all = training_data['b']
 symbols = training_data['c']
+
+# Import datasets for visualization
+#testing_data = np.load('arr_data_test.npz')
+#X_all = testing_data['a']
+#Y_all = testing_data['b']
+#symbols_all = testing_data['c']
 
 plot_distribution()
 
