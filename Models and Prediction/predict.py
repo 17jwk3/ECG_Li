@@ -26,7 +26,7 @@ import random
 # Global Parameters
 num_sec = 3 #recording duration / 2
 sample_rt = 360 #sample frequency
-os.chdir("C:\\Users\\kocha\\Documents\\Queen's\\Year 4\\ELEC498\\ECG_Li\\Model") #Path to project location
+os.chdir("C:\\Users\\kocha\\Documents\\Queen's\\Year 4\\ELEC498\\ECG_Li\\Models and Prediction") #Path to project location
 warnings.filterwarnings("ignore") #Ignore heartPy warnings
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' #Ignore TensorFlow warnings
 
