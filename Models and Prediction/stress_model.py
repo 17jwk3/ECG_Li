@@ -10,6 +10,8 @@ from keras.layers import Dense
 from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix, ConfusionMatrixDisplay, classification_report
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.svm import NuSVC
+from sklearn.linear_model import RidgeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from imblearn.under_sampling import RandomUnderSampler
@@ -23,36 +25,42 @@ import warnings
 # Global Parameters
 num_sec = 3 #recording duration / 2
 sample_rt = 360 #sample frequency
-os.chdir("C:\\Users\\kocha\\Documents\\Queen's\\Year 4\\ELEC498\\ECG_Li\\Model") #Path to project location
+os.chdir("C:\\Users\\kocha\\Documents\\Queen's\\Year 4\\ELEC498\\ECG_Li\\Models and Prediction") #Path to project location
 random.seed(42) #Set random state
 warnings.filterwarnings("ignore") #Ignore TensorFlow warnings
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' #Ignore TensorFlow warnings
 
 
 data = pd.read_csv('stress_database/swell-hrv.csv') 
-data = data[['MEAN_RR', 'MEDIAN_RR', 'SDRR', 'RMSSD', 'SDSD',
-            'HR', 'pNN50', 'SD1', 'SD2','Condition Label']]
+data = data[['MEAN_RR', 'MEDIAN_RR', 'SDRR', 'RMSSD', 'SDSD', 'HR', 'pNN50', 'SD1', 'SD2', # Time domain features
+            #'VLF', 'VLF_PCT', 'LF', 'LF_PCT', 'LF_NU', 'HF', 'HF_PCT', 'HF_NU', 'TP', 'LF_HF', #Frequency domain features
+            'Condition Label', 'subject_id']]
 
 #sns.heatmap(data.corr(), annot=True)
 #plt.show()
 
-X = data.iloc[:, :len(data.columns)-1].values
-y = data.iloc[:, len(data.columns)-1:len(data.columns)].values
+data_train = data[data['subject_id'] < 23]
+data_test = data[data['subject_id'] >= 23] #create hold out set
+
+X = data_train.iloc[:, :len(data.columns)-2].values
+y = data_train.iloc[:, len(data.columns)-2:len(data.columns)-1].values
 
 def plot_distribution(Y):
     # Function to plot the stress label distribution
 
     values, counts = np.unique(Y, return_counts=True)
+    print('Distribution of Stress Classes')
     print(np.asarray((values, counts)))
     plt.pie(counts, labels= values)
     plt.title('Distrubition of Stress Classes')
     plt.show()
 
-plot_distribution(y)
+#plot_distribution(y)
 
 # Resample majority classes
 #rs = RandomUnderSampler()
 rs = RandomOverSampler()
+
 rs.fit(X, y)
 X, y = rs.fit_resample(X, y)
 
@@ -66,9 +74,12 @@ X, y = rs.fit_resample(X, y)
 
 X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size = 0.33, random_state=42)
 
+X_test = data_test.iloc[:, :len(data.columns)-2].values
+y_test = data_test.iloc[:, len(data.columns)-2:len(data.columns)-1].values
+
 # LazyPredict Python API to assess baseline performance of various models
 #clf = LazyClassifier(verbose=0,ignore_warnings=True, custom_metric=None)
-#models,predictions = clf.fit(X_train, X_valid, y_train, y_valid)
+#models,predictions = clf.fit(X_train, X_test, y_train, y_test)
 #print(models)
 
 def model_report(y_actual, y_pred):
@@ -141,10 +152,6 @@ def stress_model_v1():
 def stress_model_v2():
     # XGB Model
 
-    #Model V2.1: 79% Accuracy
-    #model = XGBClassifier(max_depth=3, learning_rate=0.1, n_estimators=100, min_child_weight=1) 
-
-    #Model V2.2: 99% Accuracy
     model = XGBClassifier(max_depth=12, learning_rate =0.05, n_estimators=250, min_child_weight=5)
 
     print('Model V2 Built')
@@ -153,8 +160,8 @@ def stress_model_v2():
     model.fit(X_train, y_train)
     print('Model V2 Fitted')
     
-    model.save_model("stress_model_v2.json")
-    print('Model V2 Saved')
+    #model.save_model("stress_model_v2.json")
+    #print('Model V2 Saved')
     
     print('Training Prediction')
     y_predict = model.predict(X_train)
@@ -165,9 +172,75 @@ def stress_model_v2():
     y_predict = model.predict(X_valid)
     print(classification_report(y_valid, y_predict, digits=3))
     conf_matr(y_valid, y_predict)
+
+    print('Testing Prediction')
+    y_predict = model.predict(X_test)
+    print(classification_report(y_test, y_predict, digits=3))
+    conf_matr(y_test, y_predict)
     
     return model
 
-#model = stress_model_v1()
-model = stress_model_v2()
+def stress_model_v3():
+    # NuSVC model
+
+    model = NuSVC()
+
+    print('Model V3 Built')
+    print('Model V3 Compiled')
+
+    model.fit(X_train, y_train)
+    print('Model V3 Fitted')
+    
+    model.save_model("stress_model_v3.json")
+    print('Model V3 Saved')
+    
+    print('Training Prediction')
+    y_predict = model.predict(X_train)
+    print(classification_report(y_train, y_predict, digits=3))
+    conf_matr(y_train, y_predict)
+
+    print('Validation Prediction')
+    y_predict = model.predict(X_valid)
+    print(classification_report(y_valid, y_predict, digits=3))
+    conf_matr(y_valid, y_predict)
+
+    print('Testing Prediction')
+    y_predict = model.predict(X_test)
+    print(classification_report(y_test, y_predict, digits=3))
+    conf_matr(y_test, y_predict)
+
+    return model
+
+def stress_model_v4():
+    # Ridge Classifier
+
+    model = RidgeClassifier()
+
+    print('Model V4 Built')
+    print('Model V4 Compiled')
+
+    model.fit(X_train, y_train)
+    print('Model V4 Fitted')
+    
+    #model.save_model("stress_model_v4.json")
+    #print('Model V4 Saved')
+    
+    print('Training Prediction')
+    y_predict = model.predict(X_train)
+    print(classification_report(y_train, y_predict, digits=3))
+    conf_matr(y_train, y_predict)
+
+    print('Validation Prediction')
+    y_predict = model.predict(X_valid)
+    print(classification_report(y_valid, y_predict, digits=3))
+    conf_matr(y_valid, y_predict)
+
+    print('Testing Prediction')
+    y_predict = model.predict(X_test)
+    print(classification_report(y_test, y_predict, digits=3))
+    conf_matr(y_test, y_predict)
+
+    return model
+
+model = stress_model_v4()
 #model = load_model('stress_model_v1')
