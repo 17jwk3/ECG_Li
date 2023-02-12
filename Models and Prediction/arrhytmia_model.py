@@ -50,7 +50,7 @@ def model_charts(history):
     plt.title('model accuracy')
     plt.ylabel('accuracy')
     plt.xlabel('epoch')
-    plt.legend(['train', 'test'], loc='upper left')
+    plt.legend(['train', 'val'], loc='upper left')
     plt.show()
 
     plt.plot(history.history['loss'])
@@ -58,7 +58,7 @@ def model_charts(history):
     plt.title('model loss')
     plt.ylabel('loss')
     plt.xlabel('epoch')
-    plt.legend(['train', 'test'], loc='upper left')
+    plt.legend(['train', 'val'], loc='upper left')
     plt.show()
     return
 
@@ -98,7 +98,7 @@ def arr_model_v1():
     print(model.summary())
 
     # Fitting data in model - longest step
-    history = model.fit(X_train , y_train, validation_data = (X_test , y_test), batch_size = 32, epochs= 4)
+    history = model.fit(X_train , y_train, validation_data = (X_valid , y_valid), batch_size = 32, epochs= 3)
     print('Model V1 Fitted') 
 
     model_charts(history)
