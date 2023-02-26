@@ -1,0 +1,9 @@
+Manufacturer=Espressif Systems
+PartNumber=ESP32-C3-MINI-1-N4
+PartCategory=Integrated Circuit
+PackageCategory=Other
+PinCount=61
+Version=1.4
+Released=2021-03-18 11:21:55
+Downloaded=2023-02-26 03:10:38
+3D=Y

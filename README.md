@@ -16,3 +16,22 @@ This is an ECG reader capable of recording data and transmistting the data via b
 The PCB uses a ESP32-C3-MINI-1-N4, a Li-Po with a battery charging module and a buck conmverter to supply 3.3V to the rest of the components. 
 
 The main ECG components are an AD8232 opAmp board utilized for reading the electrical signals of the wearers heart and jack port for the 3 leads. 
+
+
+## PCB
+This is a 4 layer PCB board that uses a AD8232 breakout baord for the ECG. Future builds will have this on the board as well. 
+
+<img alt="3D model" src="media/pcb_3d_1.PNG" width="600"/>
+<img alt="4 layers" src="media/pcb_3d_2.PNG" width="600"/>
+
+The routing, the large space at the bttom is for a Li-po battery
+<img alt="Layer 1,2,3,4" src="media/pcb_1.PNG" width="600"/>
+<img alt="Layer 2,3,4" src="media/pcb_2.PNG" width="600"/>
+<img alt="Layer 3,4" src="media/pcb_3.PNG" width="600"/>
+<img alt="Layer 4" src="media/pcb_4.PNG" width="600"/>
+
+The schematic, featuring over charge and discharge protection, switches to control: MCU power, 5V (charging) and Battery power. Also inclused ESD protection for usb type C. The brains is an ESP32-C3-MINI-1-N4.
+
+<img alt="Layer 4" src="media/schematic.PNG" width="600"/>
+
+

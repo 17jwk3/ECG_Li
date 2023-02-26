@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP ESP32-C3-MINI-1-N4
+D SMD MODULE, ESP32-C3FN4, PCB ANT
+K
+F https://www.mouser.com/datasheet/2/891/Espressif_ESP32_C3_MINI_1_Datasheet-2006822.pdf
+$ENDCMP
+#
+#End Doc Library
