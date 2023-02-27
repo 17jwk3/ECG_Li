@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>C:\Users\bluem\Documents\Github\ECG_Li\PCB Design\ECG V2.0\ECG_2.0.kicad_sch</source>
-    <date>2023-02-25 11:09:22 PM</date>
+    <date>2023-02-26 12:44:09 PM</date>
     <tool>Eeschema (6.0.10)</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -27,7 +27,13 @@
     <comp ref="C1">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/parts/componentSearch?searchTxt=0805B104K500NT</field>
+        <field name="Vendor">C38141</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/parts/componentSearch?searchTxt=0805B104K500NT"/>
+      <property name="Vendor" value="C38141"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -36,7 +42,13 @@
     <comp ref="C2">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/2065-CL21A106KOQNNNE/C1713</field>
+        <field name="Vendor">C1713</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/2065-CL21A106KOQNNNE/C1713"/>
+      <property name="Vendor" value="C1713"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -45,16 +57,28 @@
     <comp ref="C3">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/2065-CL21A106KOQNNNE/C1713</field>
+        <field name="Vendor">C1713</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/2065-CL21A106KOQNNNE/C1713"/>
+      <property name="Vendor" value="C1713"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>1251fd76-16e8-42b4-9e8d-9fc8e99429a8</tstamps>
     </comp>
     <comp ref="C4">
-      <value>0.1uF</value>
+      <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/parts/componentSearch?searchTxt=0805B104K500NT</field>
+        <field name="Vendor">C38141</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/parts/componentSearch?searchTxt=0805B104K500NT"/>
+      <property name="Vendor" value="C38141"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -63,7 +87,13 @@
     <comp ref="C5">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/39123-0805B104K500NT/C38141</field>
+        <field name="Vendor">C38141</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/39123-0805B104K500NT/C38141"/>
+      <property name="Vendor" value="C38141"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -72,7 +102,13 @@
     <comp ref="C6">
       <value>4.7uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/TaiyoYuden-UMK212BBJ475KGT/C412634</field>
+        <field name="Vendor">C412634</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/TaiyoYuden-UMK212BBJ475KGT/C412634"/>
+      <property name="Vendor" value="C412634"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -81,7 +117,13 @@
     <comp ref="C7">
       <value>10pF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/168956-0805CG100J500NT/C157608</field>
+        <field name="Vendor">C157608</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/168956-0805CG100J500NT/C157608"/>
+      <property name="Vendor" value="C157608"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -90,7 +132,13 @@
     <comp ref="C8">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/2065-CL21A106KOQNNNE/C1713</field>
+        <field name="Vendor">C1713</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/2065-CL21A106KOQNNNE/C1713"/>
+      <property name="Vendor" value="C1713"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -99,7 +147,13 @@
     <comp ref="C9">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/2065-CL21A106KOQNNNE/C1713</field>
+        <field name="Vendor">C1713</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/2065-CL21A106KOQNNNE/C1713"/>
+      <property name="Vendor" value="C1713"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -108,7 +162,13 @@
     <comp ref="C10">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/parts/componentSearch?searchTxt=0805B104K500NT</field>
+        <field name="Vendor">C38141</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/parts/componentSearch?searchTxt=0805B104K500NT"/>
+      <property name="Vendor" value="C38141"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -117,7 +177,13 @@
     <comp ref="C11">
       <value>10uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/2065-CL21A106KOQNNNE/C1713</field>
+        <field name="Vendor">C1713</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/2065-CL21A106KOQNNNE/C1713"/>
+      <property name="Vendor" value="C1713"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -126,7 +192,13 @@
     <comp ref="C12">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/39123-0805B104K500NT/C38141</field>
+        <field name="Vendor">C38141</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/39123-0805B104K500NT/C38141"/>
+      <property name="Vendor" value="C38141"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -135,7 +207,13 @@
     <comp ref="C13">
       <value>100nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/39123-0805B104K500NT/C38141</field>
+        <field name="Vendor">C38141</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/39123-0805B104K500NT/C38141"/>
+      <property name="Vendor" value="C38141"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -145,7 +223,13 @@
       <value>RED</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>https://datasheet.lcsc.com/lcsc/2008201032_Foshan-NationStar-Optoelectronics-NCD0603R1_C84263.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/85432-NCD0603R1/C84263</field>
+        <field name="Vendor">C84263</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/85432-NCD0603R1/C84263"/>
+      <property name="Vendor" value="C84263"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -154,7 +238,13 @@
     <comp ref="D2">
       <value>Green LED</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/YongyuPhotoelectric-SZYY0603G/C434420</field>
+        <field name="Vendor">C434420</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/YongyuPhotoelectric-SZYY0603G/C434420"/>
+      <property name="Vendor" value="C434420"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -164,7 +254,13 @@
       <value>Blue LED</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
       <datasheet>https://datasheet.lcsc.com/lcsc/1811101510_Everlight-Elec-19-217-BHC-ZL1M2RY-3T_C72041.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/EverlightElec-19_117_BHC_ZL1M2RY3T/C264469</field>
+        <field name="Vendor">C264469</field>
+      </fields>
       <libsource lib="" part="LED_1" description="Light emitting diode"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/EverlightElec-19_117_BHC_ZL1M2RY3T/C264469"/>
+      <property name="Vendor" value="C264469"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -173,25 +269,28 @@
     <comp ref="D4">
       <value>LED</value>
       <footprint>LED_SMD:LED_0603_1608Metric</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/85434-NCD0603W1/C84265</field>
+        <field name="Vendor">C84265</field>
+      </fields>
       <libsource lib="Device" part="LED" description="Light emitting diode"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/85434-NCD0603W1/C84265"/>
+      <property name="Vendor" value="C84265"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>c0599cd0-38c6-4b17-9756-638d378079dc</tstamps>
     </comp>
-    <comp ref="J1">
-      <value>01x05_Female</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical</footprint>
-      <libsource lib="Connector" part="Conn_01x05_Female" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>c96bfe25-60e3-41f5-b77e-42e7ea2ee753</tstamps>
-    </comp>
     <comp ref="J2">
       <value>JST_01x04_Male</value>
-      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical</footprint>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/Zhouri-2_54_14/C5116483</field>
+        <field name="Vendor">C5116483</field>
+      </fields>
       <libsource lib="Connector" part="Conn_01x04_Male" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/Zhouri-2_54_14/C5116483"/>
+      <property name="Vendor" value="C5116483"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -200,7 +299,13 @@
     <comp ref="L1">
       <value>2.2uH</value>
       <footprint>Inductor:CY43-2.2uH</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/ShouHan-CY43_22UH/C2929416</field>
+        <field name="Vendor">C2929416</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/ShouHan-CY43_22UH/C2929416"/>
+      <property name="Vendor" value="C2929416"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -209,7 +314,13 @@
     <comp ref="R1">
       <value>10K</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414</field>
+        <field name="Vendor">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414"/>
+      <property name="Vendor" value="C17414"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -218,7 +329,13 @@
     <comp ref="R2">
       <value>1K</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414</field>
+        <field name="Vendor">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414"/>
+      <property name="Vendor" value="C17414"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -227,7 +344,13 @@
     <comp ref="R3">
       <value>1K</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414</field>
+        <field name="Vendor">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414"/>
+      <property name="Vendor" value="C17414"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -237,7 +360,13 @@
       <value>220</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
       <datasheet>https://datasheet.lcsc.com/lcsc/2206010230_UNI-ROYAL-Uniroyal-Elec-0603WAF3302T5E_C4216.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/Yageo-RC0805JR07220RL/C114742</field>
+        <field name="Vendor">C114742</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/Yageo-RC0805JR07220RL/C114742"/>
+      <property name="Vendor" value="C114742"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -246,7 +375,13 @@
     <comp ref="R5">
       <value>45K</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/4717-0805W8F1501T5E/C4310</field>
+        <field name="Vendor">C4310</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/4717-0805W8F1501T5E/C4310"/>
+      <property name="Vendor" value="C4310"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -255,7 +390,13 @@
     <comp ref="R6">
       <value>10K</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414</field>
+        <field name="Vendor">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414"/>
+      <property name="Vendor" value="C17414"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -264,7 +405,13 @@
     <comp ref="R7">
       <value>220</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/Yageo-RC0805JR07220RL/C114742</field>
+        <field name="Vendor">C114742</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/Yageo-RC0805JR07220RL/C114742"/>
+      <property name="Vendor" value="C114742"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -273,7 +420,13 @@
     <comp ref="R8">
       <value>10K</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414</field>
+        <field name="Vendor">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414"/>
+      <property name="Vendor" value="C17414"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -282,7 +435,13 @@
     <comp ref="R9">
       <value>5K1</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/116585-RS05K512JT/C115337</field>
+        <field name="Vendor">C115337</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/116585-RS05K512JT/C115337"/>
+      <property name="Vendor" value="C115337"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -291,7 +450,13 @@
     <comp ref="R10">
       <value>5K1</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/116585-RS05K512JT/C115337</field>
+        <field name="Vendor">C115337</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/116585-RS05K512JT/C115337"/>
+      <property name="Vendor" value="C115337"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -300,7 +465,13 @@
     <comp ref="R11">
       <value>100R</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/116671-RS05K101JT/C115423</field>
+        <field name="Vendor">C115423</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/116671-RS05K101JT/C115423"/>
+      <property name="Vendor" value="C115423"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -309,7 +480,13 @@
     <comp ref="R12">
       <value>1K</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414</field>
+        <field name="Vendor">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/18102-0805W8F1002T5E/C17414"/>
+      <property name="Vendor" value="C17414"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -318,7 +495,13 @@
     <comp ref="Rprog1">
       <value>1k4</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/18076-0805W8F1401T5E/C17388</field>
+        <field name="Vendor">C17388</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/18076-0805W8F1401T5E/C17388"/>
+      <property name="Vendor" value="C17388"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -414,7 +597,13 @@
       <value>TP4056-C21417</value>
       <footprint>Package_SO:MSOP-8-1EP_3x3mm_P0.65mm_EP2.5x3mm_Mask1.73x2.36mm</footprint>
       <datasheet>https://dlnmh9ip6v2uc.cloudfront.net/datasheets/Prototyping/TP4056.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/22134-TP4056M/C21417</field>
+        <field name="Vendor">C21417</field>
+      </fields>
       <libsource lib="TP4056M-C21417" part="TP4056-C21417" description=""/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/22134-TP4056M/C21417"/>
+      <property name="Vendor" value="C21417"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -424,7 +613,13 @@
       <value>USBLC6-2SC6</value>
       <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
       <datasheet>https://datasheet.lcsc.com/lcsc/2108132230_TECH-PUBLIC-USBLC6-2SC6_C2827654.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/TechPublic-USBLC62SC6/C2827654</field>
+        <field name="Vendor">C2827654</field>
+      </fields>
       <libsource lib="Power_Protection" part="USBLC6-2SC6" description="Very low capacitance ESD protection diode, 2 data-line, SOT-23-6"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/TechPublic-USBLC62SC6/C2827654"/>
+      <property name="Vendor" value="C2827654"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -434,7 +629,13 @@
       <value>Battery_Switch</value>
       <footprint>Switches:Battery_swt</footprint>
       <datasheet>file:///D:/Projects/ECG_Li/Documentation/PCB%20documentation/Switch/slider%20switch%20cheap.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/Korean_HropartsElec-SS_12D02VG4/C136719</field>
+        <field name="Vendor">C136719</field>
+      </fields>
       <libsource lib="battery switch" part="Battery_Switch" description=""/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/Korean_HropartsElec-SS_12D02VG4/C136719"/>
+      <property name="Vendor" value="C136719"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -443,7 +644,13 @@
     <comp ref="U5">
       <value>5V_switch</value>
       <footprint>Switches:5V</footprint>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/Korean_HropartsElec-SS_12D02VG4/C136719</field>
+        <field name="Vendor">C136719</field>
+      </fields>
       <libsource lib="battery switch" part="5V_switch" description=""/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/Korean_HropartsElec-SS_12D02VG4/C136719"/>
+      <property name="Vendor" value="C136719"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -453,7 +660,13 @@
       <value>TLV62568DBV</value>
       <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
       <datasheet>http://www.ti.com/lit/ds/symlink/tlv62568.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/TexasInstruments-TLV62568DBVR/C163219</field>
+        <field name="Vendor">C163219</field>
+      </fields>
       <libsource lib="Regulator_Switching" part="TLV62568DBV" description="High Efficiency Synchronous Buck Converter, Adjustable Output 0.6V-5.5V, 1A, SOT-23-5"/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/TexasInstruments-TLV62568DBVR/C163219"/>
+      <property name="Vendor" value="C163219"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -463,7 +676,13 @@
       <value>MCU_switch</value>
       <footprint>Switches:3V3 SWT</footprint>
       <datasheet>file:///D:/Projects/ECG_Li/Documentation/PCB%20documentation/Switch/slider%20switch%20cheap.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/Korean_HropartsElec-SS_12D02VG4/C136719</field>
+        <field name="Vendor">C136719</field>
+      </fields>
       <libsource lib="battery switch" part="MCU_switch" description=""/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/Korean_HropartsElec-SS_12D02VG4/C136719"/>
+      <property name="Vendor" value="C136719"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -473,7 +692,13 @@
       <value>Tactile_push_button_6x6mm</value>
       <footprint>Buttons:Tactile_pushbutton_6x6mm</footprint>
       <datasheet>https://datasheet.lcsc.com/lcsc/1810101632_E-Switch-TL3301AF160QG_C273519.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/eswitch-TL3301AF160QG/C273519</field>
+        <field name="Vendor">C273519</field>
+      </fields>
       <libsource lib="Tactile button" part="Tactile_push_button_6x6mm" description=""/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/eswitch-TL3301AF160QG/C273519"/>
+      <property name="Vendor" value="C273519"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -483,7 +708,13 @@
       <value>USB-TYPE0-C-16P</value>
       <footprint>USBS:HRO_TYPE-C-31-M-12</footprint>
       <datasheet>https://datasheet.lcsc.com/lcsc/2201121730_HDGC-TYPE-C-CQ-106PWB_C2936196.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/Shenzhen_KinghelmElec-KH_TYPE_C16P/C709357</field>
+        <field name="Vendor">C709357</field>
+      </fields>
       <libsource lib="USB-TYPE-C-16P" part="USB-TYPE0-C-16P" description=""/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/Shenzhen_KinghelmElec-KH_TYPE_C16P/C709357"/>
+      <property name="Vendor" value="C709357"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -494,14 +725,14 @@
       <footprint>ESP32:XCVR_ESP32-C3-MINI-1-N4</footprint>
       <datasheet>https://www.espressif.com/sites/default/files/documentation/esp32-c3-mini-1_datasheet_en.pdf</datasheet>
       <fields>
-        <field name="MAXIMUM_PACKAGE_HEIGHT">2.55mm</field>
+        <field name="Note">https://jlcpcb.com/partdetail/EspressifSystems-ESP32_C3_MINI_1N4/C2838502</field>
         <field name="STANDARD">pg.25</field>
+        <field name="Vendor">C2838502</field>
       </fields>
       <libsource lib="ESP32-C3-MINI-1-N4" part="ESP32-C3-MINI-1-N4" description=""/>
       <property name="STANDARD" value="pg.25"/>
-      <property name="PARTREV" value=""/>
-      <property name="MAXIMUM_PACKAGE_HEIGHT" value="2.55mm"/>
-      <property name="MANUFACTURER" value=""/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/EspressifSystems-ESP32_C3_MINI_1N4/C2838502"/>
+      <property name="Vendor" value="C2838502"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -511,7 +742,13 @@
       <value>FS8205A</value>
       <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
       <datasheet>https://datasheet.lcsc.com/lcsc/2010271837_FUXINSEMI-FS8205A_C908265.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/Fuxinsemi-FS8205A/C908265</field>
+        <field name="Vendor">C908265</field>
+      </fields>
       <libsource lib="Battery protection" part="FS8205A" description=""/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/Fuxinsemi-FS8205A/C908265"/>
+      <property name="Vendor" value="C908265"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -521,7 +758,13 @@
       <value>DW01</value>
       <footprint>Package_TO_SOT_SMD:SOT-23-6</footprint>
       <datasheet>https://datasheet.lcsc.com/lcsc/2204271145_Guangdong-Hottech-DW01_C181096.pdf</datasheet>
+      <fields>
+        <field name="Note">https://jlcpcb.com/partdetail/GuangdongHottech-DW01/C181096</field>
+        <field name="Vendor">C181096</field>
+      </fields>
       <libsource lib="DW01" part="DW01" description=""/>
+      <property name="Note" value="https://jlcpcb.com/partdetail/GuangdongHottech-DW01/C181096"/>
+      <property name="Vendor" value="C181096"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="ECG_2.0.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -931,7 +1174,6 @@
       <node ref="C7" pin="1" pintype="passive"/>
       <node ref="C8" pin="1" pintype="passive"/>
       <node ref="C9" pin="1" pintype="passive"/>
-      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="L1" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="R5" pin="1" pintype="passive"/>
@@ -970,11 +1212,9 @@
       <node ref="U7" pin="2" pintype="power_in"/>
     </net>
     <net code="5" name="+LO">
-      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="U10" pin="23" pinfunction="IO9" pintype="input"/>
     </net>
     <net code="6" name="-LO">
-      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U10" pin="22" pinfunction="IO8" pintype="input"/>
     </net>
     <net code="7" name="/RX">
@@ -1024,7 +1264,6 @@
       <node ref="C9" pin="2" pintype="passive"/>
       <node ref="D3" pin="1" pinfunction="K" pintype="passive"/>
       <node ref="D4" pin="1" pinfunction="K" pintype="passive"/>
-      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="R1" pin="2" pintype="passive"/>
       <node ref="R10" pin="2" pintype="passive"/>
@@ -1145,7 +1384,6 @@
       <node ref="U12" pin="1" pinfunction="OD" pintype="output"/>
     </net>
     <net code="34" name="Output">
-      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="TP1" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="TP5" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U10" pin="16" pinfunction="IO10" pintype="input"/>

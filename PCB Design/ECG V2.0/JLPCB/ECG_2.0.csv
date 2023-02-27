@@ -1,0 +1,36 @@
+Comment,Designator ,Footprint,JLCPCB Part#
+100nF,"C1, C4, C5, C10, C12, C13, ",Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,C38141
+10uF,"C2, C3, C8, C9, C11, ",Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,C1713
+4.7uF,"C6, ",Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,C412634
+10pF,"C7, ",Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,C157608
+RED,"D1, ",LED_SMD:LED_0603_1608Metric,C84263
+Green LED,"D2, ",LED_SMD:LED_0603_1608Metric,C434420
+Blue LED,"D3, ",LED_SMD:LED_0603_1608Metric,C264469
+LED,"D4, ",LED_SMD:LED_0603_1608Metric,C84265
+JST_01x04_Male,"J2, ",Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical,C5116483
+2.2uH,"L1, ",Inductor:CY43-2.2uH,C2929416
+10K,"R1, R6, R8, ",Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17414
+1K,"R2, R3, R12, ",Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17414
+220,"R4, R7, ",Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C114742
+45K,"R5, ",Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C4310
+5K1,"R9, R10, ",Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C115337
+100R,"R11, ",Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C115423
+1k4,"Rprog1, ",Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,C17388
+TestPoint_Flag,"TP1, TP2, TP3, TP4, ",,
+TP Output,"TP5, ",TestPoint:TestPoint_Pad_2.0x2.0mm,
+TP 3V3,"TP6, ",TestPoint:TestPoint_Pad_2.0x2.0mm,
+TP GND,"TP7, ",TestPoint:TestPoint_Pad_2.0x2.0mm,
+TP 5V,"TP8, ",TestPoint:TestPoint_Pad_2.0x2.0mm,
+TP 4V,"TP9, ",TestPoint:TestPoint_Pad_2.0x2.0mm,
+Li-Po,"U1, ",Battery_solder_pads:Battery Solder Pad 2.5x2.0mm,
+TP4056-C21417,"U2, ",Package_SO:MSOP-8-1EP_3x3mm_P0.65mm_EP2.5x3mm_Mask1.73x2.36mm,C21417
+USBLC6-2SC6,"U3, ",Package_TO_SOT_SMD:SOT-23-6,C2827654
+Battery_Switch,"U4, ",Switches:Battery_swt,C136719
+5V_switch,"U5, ",Switches:5V,C136719
+TLV62568DBV,"U6, ",Package_TO_SOT_SMD:SOT-23-5,C163219
+MCU_switch,"U7, ",Switches:3V3 SWT,C136719
+Tactile_push_button_6x6mm,"U8, ",Buttons:Tactile_pushbutton_6x6mm,C273519
+USB-TYPE0-C-16P,"U9, ",USBS:HRO_TYPE-C-31-M-12,C709357
+ESP32-C3-MINI-1-N4,"U10, ",ESP32:XCVR_ESP32-C3-MINI-1-N4,C2838502
+FS8205A,"U11, ",Package_TO_SOT_SMD:SOT-23-6,C908265
+DW01,"U12, ",Package_TO_SOT_SMD:SOT-23-6,C181096
