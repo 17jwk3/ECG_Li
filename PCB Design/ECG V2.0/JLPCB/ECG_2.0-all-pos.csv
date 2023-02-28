@@ -1,0 +1,46 @@
+Designator,Val,Package,Mid X,Mid Y,Rotation,Layer
+C1,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,231.14,-93.726,0,top
+C2,10uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,246.126,-104.394,-90,top
+C3,10uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,240.792,-87.63,180,top
+C4,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,226.7005,-100.33,0,top
+C5,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,218.059,-99.441,0,top
+C6,4.7uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,227.33,-90.17,-90,top
+C7,10pF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,221.385,-95.25,90,top
+C8,10uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,216.3525,-95.25,90,top
+C9,10uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,225.044,-78.232,90,top
+C10,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,227.33,-78.232,90,top
+C11,10uF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,246.872,-81.788,90,top
+C12,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,241.808,-90.932,-90,top
+C13,100nF,C_0805_2012Metric_Pad1.18x1.45mm_HandSolder,230.378,-97.028,-90,top
+D1,RED,LED_0603_1608Metric,253.746,-103.378,180,top
+D2,Green LED,LED_0603_1608Metric,253.746,-106.172,180,top
+D3,Blue LED,LED_0603_1608Metric,215.9,-88.1125,90,top
+D4,LED,LED_0603_1608Metric,222.885,-76.835,-90,top
+J1,01x05_Female,PinHeader_1x05_P2.54mm_Vertical,219.964,-86.863,180,top
+J2,JST_01x04_Male,PinHeader_1x04_P2.54mm_Vertical,245.247,-77.089,90,top
+L1,2.2uH,CY43-2.2uH,225.806,-96.012,180,top
+R1,10K,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,246.634,-97.536,90,top
+R2,1K,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,249.936,-103.378,180,top
+R3,1K,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,249.936,-106.199,180,top
+R4,220,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,215.9,-83.82,-90,top
+R5,45K,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,218.694,-95.25,90,top
+R6,10K,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,220.726,-90.932,90,top
+R7,220,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,222.885,-80.645,90,top
+R8,10K,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,226.06,-81.28,0,top
+R9,5K1,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,245.602,-88.9,180,top
+R10,5K1,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,250.428,-80.01,180,top
+R11,100R,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,226.568,-106.68,180,top
+R12,1K,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,231.394,-100.264,180,top
+Rprog1,1k4,R_0805_2012Metric_Pad1.20x1.40mm_HandSolder,230.632,-91.186,180,top
+U1,Li-Po,Battery Solder Pad 2.5x2.0mm,218.825,-110.363,0,top
+U2,TP4056-C21417,MSOP-8-1EP_3x3mm_P0.65mm_EP2.5x3mm_Mask1.73x2.36mm,236.474,-90.424,0,top
+U3,USBLC6-2SC6,SOT-23-6,245.094,-85.725,180,top
+U4,Battery_Switch,Battery_swt,219.102,-103.124,0,top
+U5,5V_switch,5V,250.577,-96.876,90,top
+U6,TLV62568DBV,SOT-23-5,224.028,-90.424,90,top
+U7,MCU_switch,3V3 SWT,239.522,-104.394,0,top
+U8,Tactile_push_button_6x6mm,Tactile_pushbutton_6x6mm,239.522,-97.536,180,top
+U9,USB-TYPE0-C-16P,HRO_TYPE-C-31-M-12,253.9955,-86.205,90,top
+U10,ESP32-C3-MINI-1-N4,XCVR_ESP32-C3-MINI-1-N4,235.585,-77.724,0,top
+U11,FS8205A,SOT-23-6,231.5265,-103.632,180,top
+U12,DW01,SOT-23-6,226.9545,-103.632,180,top
