@@ -19,19 +19,31 @@ The main ECG components are an AD8232 opAmp board utilized for reading the elect
 
 
 ## PCB
-This is a 4 layer PCB board that uses a AD8232 breakout baord for the ECG. Future builds will have this on the board as well. 
+This is a 4 layer PCB board that uses a AD8232 breakout board for the ECG pickup. 
+The schematic, featuring over charge and discharge protection, switches to control: MCU power, 5V (charging) and Battery power. Also includes ESD protection for usb type C. The brains is an ESP32-C3-MINI-1-N4.
 
 <img alt="3D model" src="media/pcb_3d_1.PNG" width="600"/>
 <img alt="4 layers" src="media/pcb_3d_2.PNG" width="600"/>
 
-The routing, the large space at the bttom is for a Li-po battery
+#PCB layout 
 <img alt="Layer 1,2,3,4" src="media/pcb_1.PNG" width="600"/>
 <img alt="Layer 2,3,4" src="media/pcb_2.PNG" width="600"/>
 <img alt="Layer 3,4" src="media/pcb_3.PNG" width="600"/>
 <img alt="Layer 4" src="media/pcb_4.PNG" width="600"/>
 
-The schematic, featuring over charge and discharge protection, switches to control: MCU power, 5V (charging) and Battery power. Also inclused ESD protection for usb type C. The brains is an ESP32-C3-MINI-1-N4.
-
+#The schematic
 <img alt="Layer 4" src="media/schematic.PNG" width="600"/>
 
 
+##Findings, Changes
+
+I did not not the ESP32 module I chose was a "standard" component for JLCPCB which means it costed much more to manufacture this board then originall anticipated. 
+Going forward I would choose a chip that does not require "standard" assembly 
+
+With more time I would like to integrate the AD8232 onto the board and overall make the board more compact with a very small lipo battery. 
+
+t been tested but I will be following up on the findings for that as well. 
+
+My first initial thoughts is I may have needed to include a pulldown resistor for the output of the AD8232. 
+
+Overall I would like to make it cleaner, more LEDs for feedback etc. 
