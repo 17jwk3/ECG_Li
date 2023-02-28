@@ -41,7 +41,7 @@ I did not know the ESP32 module I chose was a "standard" component for JLCPCB wh
  
 Going forward I would choose a chip that does not require "standard" assembly. 
 
-With more time I would like to integrate the AD8232 module onto the board and overall make the board more compact with a very small lipo battery. Overall I would like to make it cleaner, more LEDs for feedback etc. 
+With more time I would like to integrate the AD8232 module onto the board and overall make the board more compact with a very small lipo battery. I would also like to make it cleaner, more LEDs for feedback etc. 
 
 t been tested but I will be following up on the findings for that as well. 
 
