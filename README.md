@@ -37,7 +37,7 @@ The schematic, featuring over charge and discharge protection, switches to contr
 
 # Findings, Changes
 
-I did not not the ESP32 module I chose was a "standard" component for JLCPCB which means it costed much more to manufacture this board then originall anticipated. 
+I did not know the ESP32 module I chose was a "standard" component for JLCPCB which means it costed much more to manufacture this board then originall anticipated. 
 Going forward I would choose a chip that does not require "standard" assembly 
 
 With more time I would like to integrate the AD8232 onto the board and overall make the board more compact with a very small lipo battery. 
