@@ -25,17 +25,17 @@ The schematic, featuring over charge and discharge protection, switches to contr
 <img alt="3D model" src="media/pcb_3d_1.PNG" width="600"/>
 <img alt="4 layers" src="media/pcb_3d_2.PNG" width="600"/>
 
-#PCB layout 
+# PCB layout 
 <img alt="Layer 1,2,3,4" src="media/pcb_1.PNG" width="600"/>
 <img alt="Layer 2,3,4" src="media/pcb_2.PNG" width="600"/>
 <img alt="Layer 3,4" src="media/pcb_3.PNG" width="600"/>
 <img alt="Layer 4" src="media/pcb_4.PNG" width="600"/>
 
-#The schematic
+# The schematic
 <img alt="Layer 4" src="media/schematic.PNG" width="600"/>
 
 
-##Findings, Changes
+# Findings, Changes
 
 I did not not the ESP32 module I chose was a "standard" component for JLCPCB which means it costed much more to manufacture this board then originall anticipated. 
 Going forward I would choose a chip that does not require "standard" assembly 
