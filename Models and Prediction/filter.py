@@ -25,7 +25,8 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' #Ignore TensorFlow warnings
 
 
 # Import data
-ecg_data = np.genfromtxt('ECG Samples\\Front Delt - Iliac Crest.csv', delimiter=',')
+#ecg_data = np.genfromtxt('ECG Samples\\Front Delt - Iliac Crest.csv', delimiter=',')
+ecg_data = np.genfromtxt('ECG Samples\\Upper Chest - Rib Cage Dropped Values.csv', delimiter=',')
 
 
 
@@ -54,11 +55,11 @@ data = sps.filtfilt(*lowpass, data.flatten())
 
 # Plot original ECG data and filtered data
 plt.figure()
-plt.plot(data, label='Original ECG')
-plt.plot(data, label='Lowpass')
-plt.legend()
+#plt.plot(ecg_data, 'r')
+plt.plot(data)
+#plt.legend()
 plt.xlabel('Sample number')
 plt.ylabel('Amplitude')
-plt.title('ECG data filtered')
+#plt.title('ECG data filtered')
 
 plt.show()

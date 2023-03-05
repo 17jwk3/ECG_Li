@@ -195,8 +195,43 @@ def arr_model_v3():
     print('Model V3 Saved')
     return model
 
+def arr_model_v4():
+    # Iteration of v1
+
+    model = Sequential()
+    model.add(Conv1D(filters = 128, kernel_size = 5, activation = 'relu', input_shape = (sample_rt*num_sec*2,1))) # Regardless of how many beats I have, each beat has this shape 
+    model.add(BatchNormalization()) 
+    model.add(MaxPool1D())
+    
+    model.add(Conv1D(filters= 256, kernel_size= 5, activation = 'relu'))
+    model.add(BatchNormalization())
+    model.add(MaxPool1D())
+    
+
+    model.add(Dropout(rate = 0.25))
+    model.add(Flatten())
+    model.add(Dense(1, activation = 'sigmoid'))
+    print('Model V4 Built')
+
+    model.compile(loss = 'binary_crossentropy', optimizer = 'adam', metrics = ['accuracy'])
+    print('Model V4 Compiled')
+
+    print(model.summary())
+
+    # Fitting data in model - longest step
+    history = model.fit(X_train , y_train, validation_data = (X_valid , y_valid), batch_size = 32, epochs= 3)
+    print('Model V4 Fitted') 
+
+    model_charts(history)
+
+    model.save("arr_model_v4")
+    print('Model V4 Saved')
+
+    return model
+
+
 # Build the model
-model = arr_model_v1()
+model = arr_model_v4()
 
 # Import saved model
 #model = load_model('arr_model_v1')

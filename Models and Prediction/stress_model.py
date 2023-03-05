@@ -45,6 +45,10 @@ data_test = data[data['subject_id'] >= 23] #create hold out set
 X = data_train.iloc[:, :len(data.columns)-2].values
 y = data_train.iloc[:, len(data.columns)-2:len(data.columns)-1].values
 
+X_test = data_test.iloc[:, :len(data.columns)-2].values
+y_test = data_test.iloc[:, len(data.columns)-2:len(data.columns)-1].values
+
+
 def plot_distribution(Y):
     # Function to plot the stress label distribution
 
@@ -57,12 +61,17 @@ def plot_distribution(Y):
 
 #plot_distribution(y)
 
+
 # Resample majority classes
-#rs = RandomUnderSampler()
-rs = RandomOverSampler()
+rs = RandomUnderSampler()
+#rs = RandomOverSampler()
 
 rs.fit(X, y)
 X, y = rs.fit_resample(X, y)
+
+rs.fit(X_test, y_test)
+X_test, y_test = rs.fit_resample(X_test, y_test)
+
 
 #plot_distribution(y)
 
@@ -74,8 +83,6 @@ X, y = rs.fit_resample(X, y)
 
 X_train, X_valid, y_train, y_valid = train_test_split(X, y, test_size = 0.33, random_state=42)
 
-X_test = data_test.iloc[:, :len(data.columns)-2].values
-y_test = data_test.iloc[:, len(data.columns)-2:len(data.columns)-1].values
 
 # LazyPredict Python API to assess baseline performance of various models
 #clf = LazyClassifier(verbose=0,ignore_warnings=True, custom_metric=None)
@@ -242,5 +249,5 @@ def stress_model_v4():
 
     return model
 
-model = stress_model_v4()
+model = stress_model_v2()
 #model = load_model('stress_model_v1')

@@ -4,24 +4,19 @@ Author: Alexander Koch, Ty Cymbalista, Jack Kay
 """
 
 ##libaries 
-import string
 import serial
 #import serial.tools.list_ports
 import numpy as np
-import pandas as pd
 import time
-#import ecg_plot
-#from bluetooth import *
 import heartpy as hp
-import matplotlib.pyplot as plt
 import statistics
-from scipy.signal import find_peaks, resample
+from scipy.signal import sps
 from scipy import stats
 from tensorflow import keras
+from sklearn.impute import KNNImputer
 from xgboost import XGBClassifier
 import warnings 
 import os
-import random
 
 # Global Parameters
 num_sec = 3 #recording duration / 2
@@ -31,18 +26,9 @@ warnings.filterwarnings("ignore") #Ignore heartPy warnings
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' #Ignore TensorFlow warnings
 
 
-########################
-########################
-ecg_data = np.genfromtxt('ECG-Test-2.csv', delimiter=',')
-ecg_data = resample(ecg_data, num_sec*2*sample_rt)
-#######################
-#######################
 
 def read_ecg():
-        ###########################################
-        #        Read ECG from Arduino
-        ###########################################
-
+        #########Read ECG from Arduino#############
         load_data = []
         baudrate = 230400
 
@@ -65,25 +51,36 @@ def read_ecg():
                 for val in values:
                         #append each value to a list
                         load_data.append(val)
-                time.sleep(1/360)
+                time.sleep(1/sample_rt)
         
         ecg_data = load_data
         
         return ecg_data
 
-def predict_stress(ecg_data):
-        ###########################################
-        #        Stress Detection
-        ###########################################
+def filter_ecg(read_data):
+        ################KNN Imputer Filter##########################
+        # Replace values below 500 as NaN   
+        data = [x if x > 500 else np.nan for x in read_data]
+        # Build Imputer 
+        imputer = KNNImputer(n_neighbors=5, weights='distance')
+        # Fit Imputer to data
+        data = imputer.fit_transform(np.reshape(data, (1, -1)))
 
+        ############# #Low-Pass Filter##############################
+        #Define lowpass filter
+        lowpass = sps.butter(3, 0.1, btype='low', analog=False, output='ba')
+        # Apply lowpass filter
+        filtered_data = sps.filtfilt(*lowpass, data.flatten())
+
+        return filtered_data
+
+def predict_stress(ecg_data):
+        ###########Stress Detection################
+        # Create HRV metric dictionaries
         HRV_data = hp.enhance_ecg_peaks(ecg_data, sample_rt)
         wd, m = hp.process(HRV_data, sample_rt, report_time=False, calc_freq=True)
 
-        # Optional: plot HeartPy enhanced ECG signal
-        #plot_object = hp.plotter(wd, m, show=False, title='HeartPy enhaned ECG')
-        #plt.show()
-
-        # Calculate HRV metrics
+        # Calculate HRV metrics of interest
         MEAN_RR = sum(wd['RR_list'])/len(wd['RR_list'])
         MEDIAN_RR = statistics.median(wd['RR_list'])
         SDRR = m['sdnn']
@@ -97,53 +94,31 @@ def predict_stress(ecg_data):
         HRV_metrics = [[MEAN_RR, MEDIAN_RR, SDRR, RMSSD, SDSD,
                         HR, pNN50, SD1,SD2]]
 
-        # Predict stress 
-        stress_model = XGBClassifier()
-        stress_model.load_model("stress_model_v2.json")
-        stress_output = stress_model.predict(HRV_metrics)
-        print(stress_output)
-        return
+        # Import model 
+        #stress_model = XGBClassifier()
+        #stress_model.load_model("")
+
+        stress_label = stress_model.predict(HRV_metrics)
+
+        return stress_label, HRV_metrics
 
 def predict_arrhythmia(ecg_data):
-        ###########################################
-        #        Arrhythimia Detection
-        ###########################################
-
-        thresh = 0.5 #Arryhtmia certainty threshold
-        test_case = 1000 #Test sample used to validate CNN with train data
-
-
-        # Filtering code
-        ###
-        ###
-
-
-        #Z - Score Data
+        #############Arrhythmia Detection#######
+        #Z-Score Data
         ecg_data = stats.zscore(ecg_data)
         ecg_data = ecg_data.reshape(ecg_data.shape[0], 1)
 
+        arr_model = keras.models.load_model('arr_model_v4')
 
-        training_data = np.load('arr_data.npz')
-        X_all = training_data['a']
-        Y_all = training_data['b']
-        symbols = training_data['c']
+        arr_output = arr_model.predict(np.array([ecg_data,]))
 
-        X_train = np.reshape(X_all, (X_all.shape[0], X_all.shape[1], 1))
+        return arr_output
 
-        arr_model = keras.models.load_model('arr_model_v1')
-
-        #arr_output = arr_model.predict(np.array([ecg_data,]))
-        #print(arr_output)
-
-
-        if arr_model.predict(np.array([X_train[test_case],])) > thresh:
-                arr_output = 1
-        else: arr_output = 0
-        print('Model Prediction')
-        print(arr_output)
-        print('Ground Truth')
-        print(Y_all[test_case])
-        return
-
-predict_stress(ecg_data)
+#Read unfiltered signal from Arduino
+read_data = read_ecg()
+#Filter Arduino signal
+ecg_data = filter_ecg(read_data)
+#Return stress classification and HRV metrics 
+stress_label, HRV_metrics = predict_stress(ecg_data)
+#Return probability of arrhythmia
 predict_arrhythmia(ecg_data)

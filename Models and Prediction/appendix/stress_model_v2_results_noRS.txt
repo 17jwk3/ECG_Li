@@ -1,0 +1,74 @@
+Model V2 Built
+Model V2 Compiled
+Model V2 Fitted
+Training Prediction
+              precision    recall  f1-score   support
+
+           0      1.000     1.000     1.000    122553
+           1      1.000     1.000     1.000     68563
+           2      1.000     1.000     1.000     41478
+
+    accuracy                          1.000    232594
+   macro avg      1.000     1.000     1.000    232594
+weighted avg      1.000     1.000     1.000    232594
+
+Validation Prediction
+              precision    recall  f1-score   support
+
+           0      1.000     1.000     1.000     60327
+           1      1.000     1.000     1.000     33658
+           2      1.000     1.000     1.000     20577
+
+    accuracy                          1.000    114562
+   macro avg      1.000     1.000     1.000    114562
+weighted avg      1.000     1.000     1.000    114562
+
+Testing Prediction
+              precision    recall  f1-score   support
+
+           0      0.641     0.681     0.660     29520
+           1      0.164     0.110     0.131      8722
+           2      0.138     0.161     0.149      6240
+
+    accuracy                          0.496     44482
+   macro avg      0.314     0.317     0.314     44482
+weighted avg      0.477     0.496     0.485     44482
+
+
+
+TEST SUBJECTS 1, 2
+Model V2 Built
+Model V2 Compiled
+Model V2 Fitted
+Training Prediction
+              precision    recall  f1-score   support
+
+           0      1.000     1.000     1.000    128857
+           1      1.000     1.000     1.000     66717
+           2      1.000     1.000     1.000     40978
+
+    accuracy                          1.000    236552
+   macro avg      1.000     1.000     1.000    236552
+weighted avg      1.000     1.000     1.000    236552
+
+Validation Prediction
+              precision    recall  f1-score   support
+
+           0      1.000     1.000     1.000     63383
+           1      1.000     1.000     1.000     32967
+           2      1.000     0.999     1.000     20162
+
+    accuracy                          1.000    116512
+   macro avg      1.000     1.000     1.000    116512
+weighted avg      1.000     1.000     1.000    116512
+
+Testing Prediction
+              precision    recall  f1-score   support
+
+           0      0.576     0.492     0.531     20160
+           1      0.292     0.173     0.217     11259
+           2      0.316     0.649     0.425      7155
+
+    accuracy                          0.428     38574
+   macro avg      0.395     0.438     0.391     38574
+weighted avg      0.445     0.428     0.420     38574
