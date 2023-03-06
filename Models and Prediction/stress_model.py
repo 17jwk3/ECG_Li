@@ -7,17 +7,19 @@ import pandas as pd
 import numpy as np
 from keras.models import Sequential, load_model
 from keras.layers import Dense
-from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix, ConfusionMatrixDisplay, classification_report
+from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix, ConfusionMatrixDisplay, classification_report, f1_score
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.svm import NuSVC
 from sklearn.linear_model import RidgeClassifier
+from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from imblearn.under_sampling import RandomUnderSampler
 from imblearn.over_sampling import RandomOverSampler
 from lazypredict.Supervised import LazyClassifier
 from xgboost import XGBClassifier
+import joblib
 import os
 import random
 import warnings
@@ -61,6 +63,8 @@ def plot_distribution(Y):
 
 #plot_distribution(y)
 
+'''
+### No resampling done as F1 was used for measuring performance###
 
 # Resample majority classes
 rs = RandomUnderSampler()
@@ -71,7 +75,7 @@ X, y = rs.fit_resample(X, y)
 
 rs.fit(X_test, y_test)
 X_test, y_test = rs.fit_resample(X_test, y_test)
-
+'''
 
 #plot_distribution(y)
 
@@ -249,5 +253,46 @@ def stress_model_v4():
 
     return model
 
-model = stress_model_v2()
+def stress_model_v5():
+    # GaussianNB
+
+    model = GaussianNB()
+
+    print('Model V5 Built')
+    print('Model V5 Compiled')
+
+    model.fit(X_train, y_train)
+    print('Model V5 Fitted')
+    
+    joblib.dump(model, "stress_model_v5.joblib")
+    print('Model V5 Saved')
+    
+    print('Training Prediction')
+    y_predict = model.predict(X_train)
+    print('Global F1 Score - Calculateing Metrics Globally')
+    print(f1_score(y_train, y_predict, average='micro'))
+    print('Classification Report')
+    print(classification_report(y_train, y_predict, digits=3))
+    conf_matr(y_train, y_predict)
+
+    print('Validation Prediction')
+    y_predict = model.predict(X_valid)
+    print('Global F1 Score - Calculateing Metrics Globally')
+    print(f1_score(y_valid, y_predict, average='micro'))
+    print('Classification Report')
+    print(classification_report(y_valid, y_predict, digits=3))
+    conf_matr(y_valid, y_predict)
+
+    print('Testing Prediction')
+    y_predict = model.predict(X_test)
+    print('Global F1 Score - Calculateing Metrics Globally')
+    print(f1_score(y_test, y_predict, average='micro'))
+    print('Classification Report')
+    print(classification_report(y_test, y_predict, digits=3))
+    conf_matr(y_test, y_predict)
+
+    return model
+
+
+model = stress_model_v5()
 #model = load_model('stress_model_v1')

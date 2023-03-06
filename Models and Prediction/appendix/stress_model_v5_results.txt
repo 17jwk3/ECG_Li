@@ -1,0 +1,45 @@
+TEST SUBJECTS 23, 24
+Model V5 Built
+Model V5 Compiled
+Model V5 Fitted
+Training Prediction
+Global F1 Score - Calculateing Metrics Globally
+0.5714592809788731
+Classification Report
+              precision    recall  f1-score   support
+
+           0      0.621     0.762     0.684    122553
+           1      0.486     0.372     0.422     68563
+           2      0.473     0.337     0.394     41478
+
+    accuracy                          0.571    232594
+   macro avg      0.527     0.491     0.500    232594
+weighted avg      0.555     0.571     0.555    232594
+
+Validation Prediction
+Global F1 Score - Calculateing Metrics Globally
+0.5711230600024441
+Classification Report
+              precision    recall  f1-score   support
+
+           0      0.621     0.761     0.684     60327
+           1      0.486     0.377     0.425     33658
+           2      0.468     0.332     0.388     20577
+
+    accuracy                          0.571    114562
+   macro avg      0.525     0.490     0.499    114562
+weighted avg      0.554     0.571     0.555    114562
+
+Testing Prediction
+Global F1 Score - Calculateing Metrics Globally
+0.6764758778831887
+Classification Report
+              precision    recall  f1-score   support
+
+           0      0.779     0.840     0.808     29520
+           1      0.305     0.348     0.325      8722
+           2      0.835     0.364     0.507      6240
+
+    accuracy                          0.676     44482
+   macro avg      0.640     0.517     0.547     44482
+weighted avg      0.694     0.676     0.671     44482

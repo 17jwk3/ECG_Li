@@ -14,7 +14,7 @@ from scipy.signal import sps
 from scipy import stats
 from tensorflow import keras
 from sklearn.impute import KNNImputer
-from xgboost import XGBClassifier
+import joblib
 import warnings 
 import os
 
@@ -95,8 +95,7 @@ def predict_stress(ecg_data):
                         HR, pNN50, SD1,SD2]]
 
         # Import model 
-        #stress_model = XGBClassifier()
-        #stress_model.load_model("")
+        stress_model = joblib.load('stress_model_v5.joblib')
 
         stress_label = stress_model.predict(HRV_metrics)
 
