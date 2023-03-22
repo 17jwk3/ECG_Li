@@ -7,7 +7,7 @@ import pandas as pd
 import numpy as np
 from keras.models import Sequential, load_model
 from keras.layers import Dense
-from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix, ConfusionMatrixDisplay, classification_report, f1_score
+from sklearn.metrics import accuracy_score, precision_score, recall_score, confusion_matrix, ConfusionMatrixDisplay, classification_report, f1_score, precision_recall_fscore_support
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.svm import NuSVC
@@ -61,7 +61,7 @@ def plot_distribution(Y):
     plt.title('Distrubition of Stress Classes')
     plt.show()
 
-#plot_distribution(y)
+plot_distribution(y)
 
 '''
 ### No resampling done as F1 was used for measuring performance###
@@ -264,29 +264,38 @@ def stress_model_v5():
     model.fit(X_train, y_train)
     print('Model V5 Fitted')
     
-    joblib.dump(model, "stress_model_v5.joblib")
-    print('Model V5 Saved')
+    #joblib.dump(model, "stress_model_v5.joblib")
+    #print('Model V5 Saved')
     
     print('Training Prediction')
     y_predict = model.predict(X_train)
-    print('Global F1 Score - Calculateing Metrics Globally')
-    print(f1_score(y_train, y_predict, average='micro'))
+    print('Precision, Recall, F1 Score, Support')
+    print('Note: Metrics calculated globally by counting the total true positives, false negatives and false positives')
+    print(precision_recall_fscore_support(y_train, y_predict, average='micro'))
+    print('Note: Metrics calculated for each label, and their average weight by support (the number of true instances for each label)')
+    print(precision_recall_fscore_support(y_train, y_predict, average='weighted'))
     print('Classification Report')
     print(classification_report(y_train, y_predict, digits=3))
     conf_matr(y_train, y_predict)
 
     print('Validation Prediction')
     y_predict = model.predict(X_valid)
-    print('Global F1 Score - Calculateing Metrics Globally')
-    print(f1_score(y_valid, y_predict, average='micro'))
+    print('Precision, Recall, F1 Score, Support')
+    print('Note: Metrics calculated globally by counting the total true positives, false negatives and false positives')
+    print(precision_recall_fscore_support(y_valid, y_predict, average='micro'))
+    print('Note: Metrics calculated for each label, and their average weight by support (the number of true instances for each label)')
+    print(precision_recall_fscore_support(y_valid, y_predict, average='weighted'))
     print('Classification Report')
     print(classification_report(y_valid, y_predict, digits=3))
     conf_matr(y_valid, y_predict)
 
     print('Testing Prediction')
     y_predict = model.predict(X_test)
-    print('Global F1 Score - Calculateing Metrics Globally')
-    print(f1_score(y_test, y_predict, average='micro'))
+    print('Precision, Recall, F1 Score, Support')
+    print('Note: Metrics calculated globally by counting the total true positives, false negatives and false positives')
+    print(precision_recall_fscore_support(y_test, y_predict, average='micro'))
+    print('Note: Metrics calculated for each label, and their average weight by support (the number of true instances for each label)')
+    print(precision_recall_fscore_support(y_test, y_predict, average='weighted'))
     print('Classification Report')
     print(classification_report(y_test, y_predict, digits=3))
     conf_matr(y_test, y_predict)

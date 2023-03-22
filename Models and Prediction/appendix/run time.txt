@@ -1,0 +1,19 @@
+Read time taken:  7492252200 ns      
+Filter time taken:  31240900 ns      
+Arrhythmia time taken:  1211660900 ns
+Stress HRV time taken:  12172700 ns  
+
+Read time taken:  10343352300 ns
+Filter time taken:  62419400 ns
+Arrhythmia time taken:  1446359400 ns
+Stress HRV time taken:  11554300 ns
+
+Read time taken:  7726940700 ns
+Filter time taken:  62420900 ns
+Arrhythmia time taken:  1124941500 ns
+Stress HRV time taken:  9017500 ns
+
+Read time taken:  7683203000 ns
+Filter time taken:  62511700 ns
+Arrhythmia time taken:  1207694300 ns
+Stress HRV time taken:  11607600 ns

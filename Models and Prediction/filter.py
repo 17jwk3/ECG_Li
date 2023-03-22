@@ -55,11 +55,11 @@ data = sps.filtfilt(*lowpass, data.flatten())
 
 # Plot original ECG data and filtered data
 plt.figure()
-#plt.plot(ecg_data, 'r')
-plt.plot(data)
-#plt.legend()
+plt.plot(ecg_data, color='orange', label="Input Signal")
+plt.plot(data, label="Filtered Signal")
+plt.legend(loc='upper right')
 plt.xlabel('Sample number')
-plt.ylabel('Amplitude')
+plt.ylabel('Amplitude (mV)')
 #plt.title('ECG data filtered')
 
 plt.show()
