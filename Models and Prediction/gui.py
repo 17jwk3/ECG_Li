@@ -301,23 +301,22 @@ def main_plot(filtered_ecg):
     ax1.spines['right'].set_visible(False)
     ax1.tick_params(axis='x', colors='white')
     ax1.tick_params(axis='y', colors='white')
-    ax1.set_xlabel('Timestamp (ms)', fontsize =14)
-    ax1.set_ylabel('ECG Amplitude ()', fontsize =14)
+    ax1.set_xlabel('Timestamp (ms)', fontsize =12, color = 'white')
+    ax1.set_ylabel('ECG Amplitude ()', fontsize =12, color = 'white')
     ax1.legend().set_visible(False)
     legend = ax1.legend()
-    legend.remove()
     bar1 = FigureCanvasTkAgg(figure1, window)
     bar1.get_tk_widget().place(
         x=40,
         y=72.0,
         width=780,
         height=378.0)
-    data.plot(kind='line', ax=ax1)
+    data.plot(kind='line', ax=ax1, color = '#E95F8B')
 
 def BPM_Display(HRV_metrics):
     print("BPM Display")
     
-    BPM = int(HRV_metrics[0][5])
+    BPM = round(int(HRV_metrics[0][5])*2.37, 0)
     BPM_Text = (BPM, "BPM")
     
     canvas.create_text(
@@ -336,11 +335,13 @@ def advanced_analytics(HRV_metrics):
     RMSSD = int(HRV_metrics[0][3])
     SD1 = int(HRV_metrics[0][7])
 
+    meanRRtext = "Mean RR:", MEAN_RR
+
     canvas.create_text(
         892.0,
         596.0,
         anchor="nw",
-        text=("Mean RR:", MEAN_RR),
+        text=meanRRtext,
         fill="#554CE1",
         font=("Inter SemiBold", 14 * -1)
         )
@@ -390,14 +391,14 @@ def arrythmia_results(arr_output):
         172.0,
         625.0,
         anchor="nw",
-        text = (confidence_text),
+        text = confidence_text,
         fill="#554CE1",
         font=("Inter Bold", 14 * -1)
         )
     
 def stress_results(stress_label):
     if stress_label == 1:
-        fill = "yellow"
+        fill = "orange"
         stress_text = 'Moderate Stress'
         
     elif stress_label == 2:
@@ -409,7 +410,7 @@ def stress_results(stress_label):
         stress_text = 'No Stress'
     
     canvas.create_text(
-        545.0,
+        550.0,
         596.0,
         anchor="nw",
         text=stress_text,
@@ -463,7 +464,7 @@ def function_runs():
     update_fields(ecg_data, arr_output, stress_label, run_time, HR)
 
 button_image_1 = PhotoImage(
-    file=relative_to_assets("button_1.png"))
+    file=relative_to_assets("button_1_v2_resize.png"))
 button_1 = Button(
     image=button_image_1,
     borderwidth=0,
@@ -479,7 +480,7 @@ button_1.place(
 )
 
 button_image_2 = PhotoImage(
-    file=relative_to_assets("button_2.png"))
+    file=relative_to_assets("button_2_v2_resize.png"))
 button_2 = Button(
     image=button_image_2,
     borderwidth=0,
