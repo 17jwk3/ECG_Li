@@ -69,6 +69,14 @@ normal = [
             'N'                                     #Normal beat
          ]    
 
+'''
+The data and model programs follow a similar workflow to the following Kaggle workbook:
+https://www.kaggle.com/code/klmsathishkumar/analyze-your-heart-arrhythmia-prediction
+
+Working exampes of the wfdb package can be found in the following Kaggle workbook:
+https://www.kaggle.com/code/khatri007/detection-of-congestive-heart-failure-using-ecg
+'''
+
 def check_symbols(set_name):
 # Check signal annotations in train_val or test dataset
 
@@ -284,4 +292,4 @@ symbols = training_data['c']
 
 plot_distribution()
 
-plot_heartbeat('N')
+#plot_heartbeat('N')

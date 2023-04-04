@@ -3,8 +3,11 @@ Model V5 Built
 Model V5 Compiled
 Model V5 Fitted
 Training Prediction
-Global F1 Score - Calculateing Metrics Globally
-0.5714592809788731
+Precision, Recall, F1 Score, Support
+Note: Metrics calculated globally by counting the total true positives, false negatives and false positives
+(0.5714592809788731, 0.5714592809788731, 0.5714592809788731, None)
+Note: Metrics calculated for each label, and their average weight by support (the number of true instances for each label)
+(0.5546344022000868, 0.5714592809788731, 0.5549714506458336, None)
 Classification Report
               precision    recall  f1-score   support
 
@@ -17,8 +20,11 @@ Classification Report
 weighted avg      0.555     0.571     0.555    232594
 
 Validation Prediction
-Global F1 Score - Calculateing Metrics Globally
-0.5711230600024441
+Precision, Recall, F1 Score, Support
+Note: Metrics calculated globally by counting the total true positives, false negatives and false positives
+(0.5711230600024441, 0.5711230600024441, 0.5711230600024441, None)
+Note: Metrics calculated for each label, and their average weight by support (the number of true instances for each label)
+(0.5541479755335135, 0.5711230600024441, 0.5547976227668081, None)
 Classification Report
               precision    recall  f1-score   support
 
@@ -31,8 +37,11 @@ Classification Report
 weighted avg      0.554     0.571     0.555    114562
 
 Testing Prediction
-Global F1 Score - Calculateing Metrics Globally
-0.6764758778831887
+Precision, Recall, F1 Score, Support
+Note: Metrics calculated globally by counting the total true positives, false negatives and false positives
+(0.6764758778831887, 0.6764758778831887, 0.6764758778831887, None)
+Note: Metrics calculated for each label, and their average weight by support (the number of true instances for each label)
+(0.6940588901005127, 0.6764758778831887, 0.6712554073048386, None)
 Classification Report
               precision    recall  f1-score   support
 
