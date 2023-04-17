@@ -1,4 +1,5 @@
 # Real-time Wearable-based Cardiac Monitoring with Machine Learning
+This project was part of ELEC490/498: Electrical Computer Engineering Capstone Project. A 3 semester long undertaking at Queen's Univeristy, Ontario, Canada. 
 
 ## Design Problem
 Heart disease describes a range of conditions that affect a person’s heart, including blood vessel disease, arrhythmias, valve disease, etc.Various tests are used to diagnose heart conditions. Doctors start with a risk assessment looking into medical history, blood pressure, as well as past and current symptoms but further tests may be required. These methods can be hard to access for most people, due to socio-economic factors. This is a long and outdated process in the digital era of telemedicine. Doctors and patients need fast, easily accessible procedures. 
@@ -185,10 +186,27 @@ Nonetheless, results are satisfactory for obtaining real-time assessments. Stres
 
 ### Graphical User Interface @CTy27
 #### Design
+The GUI was designed to be responsive, have a low learning curve, and supply key metrics such as heart rate, abnormality likelihood, presence of stress, and supplement heart rate variability (HRV) metrics such as mean RR. These metrics were selected after conducting extensive research into clinical grade industry standard ECG monitors, to replicate their functionality.
 
+The Python Tkinter library was selected to allow for seamless integration with the constituent sub-systems, as it can function using a single script requiring the end user to only use one file to access the functionality. Moreover, Tkinter is open sourced which ensures compatibility and facilitates future development. 
+
+User testing was performed by gathering feedback from preliminary UI drafts. Users appreciated the color-coded feedback and unified design language, but feedback ultimately indicated that the lighter color scheme made the GUI appear less intimidating. 
+
+<img alt="GUI_concept" src="media/GUI_concept.png" width="600"/>
+
+The final design uses a clean modern interface with clear visualizations. It includes added features such as the ability to save and export data for further analysis via PDF using the “See Full Report” button. 
+
+<img alt="GUI_final" src="media/GUI_final.png" width="600"/>
 
 #### Findings & Changes
+The GUI acts as a proof of concept and does not store any medical data; it loses all information once the front end is closed and thus is not bound to any regulatory compliance. The information displayed is not a formal diagnosis and the documentation serves as a clear indicator of whether a medical professional should be consulted. 
 
+It performs similarly to commercial products, allowing for user initiation of ECG readings, and those readings being displayed visually once complete. 
+
+The largest weakness lies in the usage of Python. The Tkinter library is very limiting from a design perspective, making it difficult to implement a modern-looking dashboard. 
+It only supports certain shapes, images, and colors which makes the overall appearance less customizable. 
+Another weakness lies in the Tkinter structure which required all other sub-systems’ code to be embedded into a single file due. Restarting the entire program is therefore necessary to initiate a new run. 
+This is inconvenient to the end user as this operation is computationally expensive and can add time to the entire experience. Using another Python library like PyQt, or a mobile app software like Swift would likely increase the overall user experience and allow for multiple runs without restarting the entire front end, but further research would need to be conducted. 
 
 ---------------
 
