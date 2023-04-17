@@ -7,31 +7,35 @@ Heart disease describes a range of conditions that affect a person’s heart, in
 Many forms of it can be prevented with healthy lifestyle choices and medical interventions. Stress can affect the body mentally and physically left unchecked manifests as an increased heart rate among other symptoms contributing to high blood pressure, diabetes, and heart disease.
 
 
-Computational advancements have increased the ability to predict and prevent abnormalities by creating faster, less intrusive, and more easily accessible methods. The solution is a blend of software and hardware where an electrocardiogram (ECG) sensor that transmits a user’s heartbeat to a machine-learning algorithm in real-time to provide actionable feedback on potential abnormalities. 
+Computational advancements have increased the ability to concurrently predict and prevent cardiac abnormalities. Thus creating faster, less intrusive, and more easily accessible methods for patients and practitioners alike.
 
-## Components
+
+
+## Design and Implementaiton
+
+Low-cost ECG (electrocardiogram) electrodes using a 3 lead configuraiton are used to capture impulses through the heart muscles and transmit the information via Bluetooth to a machine-learning algorithm in real-time to provide actionable feedback on potential abnormalities and stress levels via a Graphical User Interface, as seen in the following implementation pipeline.
+<img alt="Solution Pipeline" src="media/Solution Pipeline.PNG" width="600"/>
 ---------------
-This is an ECG reader capable of recording data and transmistting the data via bluetooth to a computer or cellphone for analyzing using 3 leads. 
 
+### Hardware
 The PCB uses a ESP32-C3-MINI-1-N4, a Li-Po with a battery charging module and a buck conmverter to supply 3.3V to the rest of the components. 
-
 The main ECG components are an AD8232 opAmp board utilized for reading the electrical signals of the wearers heart and jack port for the 3 leads. 
 
 
-## PCB
+#### PCB
 This is a 4 layer PCB board that uses a AD8232 breakout board for the ECG pickup. 
 The schematic, featuring over charge and discharge protection, switches to control: MCU power, 5V (charging) and Battery power. Also includes ESD protection for usb type C. The brains is an ESP32-C3-MINI-1-N4.
 
 <img alt="3D model" src="media/pcb_3d_1.PNG" width="600"/>
 <img alt="4 layers" src="media/pcb_3d_2.PNG" width="600"/>
 
-# PCB layout 
+#### PCB layout 
 <img alt="Layer 1,2,3,4" src="media/pcb_1.PNG" width="600"/>
 <img alt="Layer 2,3,4" src="media/pcb_2.PNG" width="600"/>
 <img alt="Layer 3,4" src="media/pcb_3.PNG" width="600"/>
 <img alt="Layer 4" src="media/pcb_4.PNG" width="600"/>
 
-# The schematic
+#### The schematic
 <img alt="Layer 4" src="media/schematic.PNG" width="600"/>
 
 
