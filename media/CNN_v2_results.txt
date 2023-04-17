@@ -1,0 +1,100 @@
+Model V2 Compiled
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv1d (Conv1D)             (None, 2158, 64)          256       
+
+ elu (ELU)                   (None, 2158, 64)          0
+
+ batch_normalization (BatchN  (None, 2158, 64)         256       
+ ormalization)
+
+ conv1d_1 (Conv1D)           (None, 2156, 64)          12352     
+
+ elu_1 (ELU)                 (None, 2156, 64)          0
+
+ batch_normalization_1 (Batc  (None, 2156, 64)         256
+ hNormalization)
+
+ max_pooling1d (MaxPooling1D  (None, 1078, 64)         0
+ )
+
+ conv1d_2 (Conv1D)           (None, 1076, 128)         24704
+
+ elu_2 (ELU)                 (None, 1076, 128)         0
+
+ batch_normalization_2 (Batc  (None, 1076, 128)        512       
+ hNormalization)
+
+ conv1d_3 (Conv1D)           (None, 1074, 128)         49280
+
+ elu_3 (ELU)                 (None, 1074, 128)         0
+
+ batch_normalization_3 (Batc  (None, 1074, 128)        512
+ hNormalization)
+
+ max_pooling1d_1 (MaxPooling  (None, 537, 128)         0
+ 1D)
+
+ conv1d_4 (Conv1D)           (None, 535, 256)          98560     
+
+ elu_4 (ELU)                 (None, 535, 256)          0
+
+ batch_normalization_4 (Batc  (None, 535, 256)         1024
+ hNormalization)
+
+ conv1d_5 (Conv1D)           (None, 533, 256)          196864
+
+ elu_5 (ELU)                 (None, 533, 256)          0
+
+ batch_normalization_5 (Batc  (None, 533, 256)         1024
+ hNormalization)
+
+ max_pooling1d_2 (MaxPooling  (None, 266, 256)         0
+ 1D)
+
+ flatten (Flatten)           (None, 68096)             0
+
+ dense (Dense)               (None, 2048)              139462656
+
+ elu_6 (ELU)                 (None, 2048)              0
+
+ batch_normalization_6 (Batc  (None, 2048)             8192
+ hNormalization)
+
+ dropout (Dropout)           (None, 2048)              0
+
+ dense_1 (Dense)             (None, 1)                 2049
+
+=================================================================
+Total params: 139,858,497
+Trainable params: 139,852,609
+Non-trainable params: 5,888
+_________________________________________________________________
+None
+Epoch 1/2
+2289/2289 [==============================] - 8600s 4s/step - loss: 0.3009 - accuracy: 0.4913
+Epoch 2/2
+2289/2289 [==============================] - 8516s 4s/step - loss: 0.1754 - accuracy: 0.4913
+Model V2 Fitted
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op, _jit_compiled_convolution_op while saving (showing 5 of 7). These functions will not be directly callable after loading.
+Model V2 Saved
+2289/2289 [==============================] - 1144s 499ms/step
+1128/1128 [==============================] - 591s 524ms/step
+Model Predict
+Train
+AUC:0.500
+Accuracy:0.491
+Recall:1.000
+Precision:0.491
+Specificity:0.000
+Prevalence:0.491
+
+Valid
+AUC:0.500
+Accuracy:0.486
+Recall:1.000
+Precision:0.486
+Specificity:0.000
+Prevalence:0.486

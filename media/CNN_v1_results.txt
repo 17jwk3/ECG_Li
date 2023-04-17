@@ -1,0 +1,68 @@
+Model V1 Built
+Model V1 Compiled
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ conv1d (Conv1D)             (None, 2156, 128)         768       
+
+ dropout (Dropout)           (None, 2156, 128)         0
+
+ flatten (Flatten)           (None, 275968)            0
+
+ dense (Dense)               (None, 1)                 275969    
+
+=================================================================
+Total params: 276,737
+Trainable params: 276,737
+Non-trainable params: 0
+_________________________________________________________________
+None
+Epoch 1/15
+2101/2101 [==============================] - 610s 286ms/step - loss: 0.3346 - accuracy: 0.8606 - val_loss: 0.2864 - val_accuracy: 0.8803
+Epoch 2/15
+2101/2101 [==============================] - 550s 262ms/step - loss: 0.2789 - accuracy: 0.8865 - val_loss: 0.2687 - val_accuracy: 0.8893
+Epoch 3/15
+2101/2101 [==============================] - 551s 262ms/step - loss: 0.2614 - accuracy: 0.8939 - val_loss: 0.2578 - val_accuracy: 0.8954
+Epoch 4/15
+2101/2101 [==============================] - 520s 248ms/step - loss: 0.2490 - accuracy: 0.9016 - val_loss: 0.2754 - val_accuracy: 0.8919
+Epoch 5/15
+2101/2101 [==============================] - 507s 241ms/step - loss: 0.2373 - accuracy: 0.9061 - val_loss: 0.2577 - val_accuracy: 0.9025
+Epoch 6/15
+2101/2101 [==============================] - 499s 237ms/step - loss: 0.2298 - accuracy: 0.9083 - val_loss: 0.3012 - val_accuracy: 0.8836
+Epoch 7/15
+2101/2101 [==============================] - 499s 237ms/step - loss: 0.2212 - accuracy: 0.9124 - val_loss: 0.2464 - val_accuracy: 0.8978
+Epoch 8/15
+2101/2101 [==============================] - 499s 238ms/step - loss: 0.2145 - accuracy: 0.9150 - val_loss: 0.2404 - val_accuracy: 0.9074
+Epoch 9/15
+2101/2101 [==============================] - 498s 237ms/step - loss: 0.2088 - accuracy: 0.9169 - val_loss: 0.2388 - val_accuracy: 0.9113
+Epoch 10/15
+2101/2101 [==============================] - 509s 242ms/step - loss: 0.2034 - accuracy: 0.9201 - val_loss: 0.2377 - val_accuracy: 0.9126
+Epoch 11/15
+2101/2101 [==============================] - 506s 241ms/step - loss: 0.1945 - accuracy: 0.9237 - val_loss: 0.2500 - val_accuracy: 0.9122
+Epoch 12/15
+2101/2101 [==============================] - 509s 242ms/step - loss: 0.1918 - accuracy: 0.9250 - val_loss: 0.2523 - val_accuracy: 0.9129
+Epoch 13/15
+2101/2101 [==============================] - 510s 243ms/step - loss: 0.1877 - accuracy: 0.9265 - val_loss: 0.2470 - val_accuracy: 0.9129
+Epoch 14/15
+2101/2101 [==============================] - 513s 244ms/step - loss: 0.1842 - accuracy: 0.9286 - val_loss: 0.2421 - val_accuracy: 0.9145
+Epoch 15/15
+2101/2101 [==============================] - 565s 269ms/step - loss: 0.1809 - accuracy: 0.9281 - val_loss: 0.2575 - val_accuracy: 0.9007
+Model V1 Fitted
+Training Predict
+2101/2101 [==============================] - 63s 30ms/step
+Accuracy:0.932
+Recall:0.958
+Precision:0.912
+
+Validation Predict
+1035/1035 [==============================] - 40s 38ms/step
+Accuracy:0.901
+Recall:0.925
+Precision:0.883
+
+Testing Predict
+281/281 [==============================] - 8s 30ms/step
+Accuracy:0.878
+Recall:0.834
+Precision:0.814

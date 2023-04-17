@@ -33,7 +33,10 @@ warnings.filterwarnings("ignore") #Ignore TensorFlow warnings
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' #Ignore TensorFlow warnings
 
 
-data = pd.read_csv('stress_database/swell-hrv.csv') 
+data = 
+# download 'dataset/2. final/'datasets/hrv/swell/combined/classification/combined-swell-classification-hrv-dataset.csv'
+#           from https://www.kaggle.com/datasets/qiriro/stress
+
 data = data[['MEAN_RR', 'MEDIAN_RR', 'SDRR', 'RMSSD', 'SDSD', 'HR', 'pNN50', 'SD1', 'SD2', # Time domain features
             #'VLF', 'VLF_PCT', 'LF', 'LF_PCT', 'LF_NU', 'HF', 'HF_PCT', 'HF_NU', 'TP', 'LF_HF', #Frequency domain features
             'Condition Label', 'subject_id']]

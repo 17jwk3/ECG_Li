@@ -273,16 +273,16 @@ def plot_distribution():
     return
 
 # Create the datasets
-#X_all, Y_all, symbols = make_dataset(test_dataset = False)
+X_all, Y_all, symbols = make_dataset(test_dataset = False)
 
 # Save the datasets
-#np.savez_compressed('arr_data_train_val',a=X_all, b=Y_all, c=symbols)
+np.savez_compressed('arr_data_train_val',a=X_all, b=Y_all, c=symbols)
 
 # Import datasets for visualization
-training_data = np.load('arr_data_train_val.npz')
-X_all = training_data['a']
-Y_all = training_data['b']
-symbols = training_data['c']
+#training_data = np.load('arr_data_train_val.npz')
+#X_all = training_data['a']
+#Y_all = training_data['b']
+#symbols = training_data['c']
 
 # Import datasets for visualization
 #testing_data = np.load('arr_data_test.npz')
