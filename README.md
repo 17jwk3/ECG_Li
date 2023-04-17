@@ -90,6 +90,7 @@ In order to create the dataset locally, run 'arrhythmia_data.py'.
 <img alt="CNN" src="media/CNN_v4.png" width="600"/>
 
 Leave-One-Out Crass-validation was employed via a hold-out set. The database was divided into three sets using a 60/30/10 train/validation/test split.
+The holdout set primarily sought to encompass ~5 unseen subjects, consequentially representing ~10% of the data. 
 
 The Deep-Learning (DL) model follows a Convolutional Neural Network architecture (CNN) using a TensorFlow backend
 
@@ -119,10 +120,37 @@ A limitation of the current methodology lies in grouping all abnormal patterns t
 
 ### Stress Detection @alexkoch14
 #### Design
+The multimodal SWELL Knowledge Work dataset for stress modeling (SWELL-KW) contains data from 25 participants (~3 hours each) performing typical office work (writing reports, reading emails, etc.) under 3 conditions: no stress (0), email interruptions (1) and time pressure (2).
 
+The stress model was trained on HRV metrics obtained from the SWELL-KW dataset.
+Inter-beat interval (IBI) samples are extracted from the raw ECG signal of each subject over the 3-hour time series. 
+HRV indices are then computed on a subset of the IBI signal array. New samples are appended to the IBI array while the oldest is removed from the beginning,creating a sliding window of HRV indices over a fixed acquisition window analogous to the arrhythmia data. 
+This facilitates a granular study of how momentary heartbeat patterns and concurrent HRV metrics reflect a subject’s stress level. 
+
+HRV metrics are computed from the input filtered signal using hrv-analysis Python library.
+
+Leave-One-Out Crass-validation was employed via a hold-out set. The database was divided into three sets using a 60/30/10 train/validation/test split.
+The holdout set primarily sought to encompass ~3 unseen subjects, consequentially representing ~10% of the data. 
+
+Twenty-three classification models were then assessed using the LazyPredict Python library, indicating Guassian Naive Bayes provides the best time/accuracy trade-off.
+
+<img alt="stress_comparison" src="media/stress_comparison.png" width="600"/>
 
 #### Findings & Changes
 
+Stress model performance indicates a 57.1% F1-score on the validaiton set and 67.6% F1-Score on the test set, as seen in media/stress_model_v5_results.txt
+
+<img alt="stress_model_v5_results" src="media/stress_model_v5_results.png" width="600"/>
+
+The disparity in validation and testing sets accentuates some underlying points of issue. 
+
+Models possess inherent predictive error which may lead to a relatively higher score on the test set due to chance.
+
+The current neurobiological evidence suggests that HRV is impacted by stress and supports its use for an objective assessment of health, but it can be expressed through other psychological pathways (EDA, body posture, etc.).
+These added features, which are not part of the feature set, are perhaps expressed more vividly in the validation subjects. 
+Equivalently said, fewer people in the validation set tend to manifest stress predominantly through HRV than other physiological pathways. This is a limitation of training the stress model on a subset of a subset of the SWELL-KW dataset. 
+
+Nonetheless, results are satisfactory for obtaining real-time assessments. Stress mitigation is a preventative step in cardiac abnormality evasion. It is the first line of defense, but an overpassed subject will get caught using CNN v4 used in arrhythmia detection.  
 
 ---------------
 
