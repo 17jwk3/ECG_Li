@@ -76,18 +76,29 @@ The arrhythmia model was trained on the MIT-BIH database, containing 48-half-hou
 The recordings were digitized at 360 samples per second and two or more cardiologists independently annotated each record.
 
 The recordings were extracted using wfdb, the Python wave-form database package. ECG signals are transformed into snippets during the data pre-processing step as the model analyzes one-dimensional input data. 
+
 Heartbeats in the first or last 3 seconds of the half-hour recording are ignored to reduce data clipping sizes, as is for any non-beat annotations. Beat symbols are encoded as abnormal (1) or normal (0). 
+
 A sliding window of 6 seconds per beat segment is used to capture the current beat and those adjacent to retain enough information from encompassed patterns ensuring a 2-3 beat overlap.
+
 Heartbeat voltages range among individuals depending on anatomy, body composition, blood volume, and ECG lead placement. Z-score normalization standardizes values into how much each reading deviates from the mean of all readings within the sample window
-In order to create the dataset locally, run 'arrhythmia_data.py'
+
+In order to create the dataset locally, run 'arrhythmia_data.py'.
+
 <img alt="arr_data_comparison" src="media/arr_data_comparison.png" width="600"/>
+
 <img alt="CNN" src="media/CNN_v4.png" width="600"/>
 
 Leave-One-Out Crass-validation was employed via a hold-out set. The database was divided into three sets using a 60/30/10 train/validation/test split.
+
 The Deep-Learning (DL) model follows a Convolutional Neural Network architecture (CNN) using a TensorFlow backend
+
 CNN_V4 uses a shallow, wide and simple architecture to overcome common real-time classification issues. 
+
 The dataset has few features, but lots of records. This is perfect for DL models that need fewer parameters and sample complexity to achieve acceptable performance.
+
 The model was trained on three passings of the training data (epochs). Accuracy decreased, loss increased, and overfitting began to occur beyond this point. 
+
 In order to replicate the model, run 'arrhythmia_model.py'
 
 <img alt="CNN_loss" src="media/CNN_v4_acc_loss.png" width="600"/>
@@ -95,8 +106,11 @@ In order to replicate the model, run 'arrhythmia_model.py'
 
 #### Findings & Changes
 CNN v4’s performance indicates 87.7% accuracy and 84% recall on the test set, which comprises unseen patients, as seen in media/CNN_v4_results.txt
+
 This is satisfactory for real-time classification uses which aren’t meant to serve as a clinical diagnosis. 
+
 It showed minimal signs of overfitting with training loss and validation losses of 0.2195 and 0.2264 respectively. 
+
 <img alt="CNN_v4_results" src="media/CNN_v4_results.png" width="600"/>
 
 A limitation of the current methodology lies in grouping all abnormal patterns to obtain even distribution without resampling. It is possible that CNN v4’s ~90% accuracy is accredited is predicting 80% of abnormality types with 100% accuracy, and the remaining 20% with 0% accuracy. The model might not be able to predict less prevalent abnormality patterns while being excellent in predicting common ones.
