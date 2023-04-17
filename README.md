@@ -38,7 +38,7 @@ The schematic, featuring over charge and discharge protection, switches to contr
 <img alt="Layer 3,4" src="media/pcb_3.PNG" width="600"/>
 <img alt="Layer 4" src="media/pcb_4.PNG" width="600"/>
 
-#### The schematic
+#### Schematic
 <img alt="Layer 4" src="media/schematic.PNG" width="600"/>
 
 
@@ -55,17 +55,44 @@ The output of the AD8232 may have needed to include a pulldown resistor.
 
 ### Data Acquisition @17jwk3
 #### Design
+Data is acquired using the AD8323 amplifier and processed by the ESP32 microcontroller. The amplifier is connected to a 3-lead system placed on the end-user’s person. The top L and R leads are used for data acquisition, while the third and lower lead is the grounding lead.  
+
+The data is sampled at 6 seconds with a 115,200 baud rate. It uses a fixed 360 frequency in accordance with the arrhythmia dataset. Heart beats are characterized by shape and frequency. Abnormalities distinguished by pace (Sinus Arrhythmia, Bradycardia, etc.) would incur informational loss or distortion from domain resampling .
+
+The firmware was coded using the Arduino IDE, a variant of the C++ programming language. It records when both L and R leads sense an electrical signal, as to avoid null readings from not being applied.
+
+In order to create the dataset locally, run 'Models and Prediction/reciever.py'.
 
 #### Findings & Changes
 
+Modification in limb electrode placement invokes changes in ECG wave amplitudes, which may alter the clinical limits of ECG normality detection. It was uncovered that leads placed no further than 12” apart yield the cleanest readings. 
+
+<img alt="lead_proximity" src="media/lead_proximity.png" width="600"/>
 
 ---------------
 
 ### Processing and Filtering @CTy27
 #### Design
+Processing was designed to address missing values and noise artifacts from the raw ECG data using the appropriate filtering methods.
+
+The constraints surrounding hardware filters far outweighed those using software, as hardware filters are more expensive, more difficult to test, and would increase the PCB footprint. Software filtering allows for greater control and optimization which leads to a more optimally processed resulting signal.
+
+A technique known as imputation was used to recover lost values by synthesizing datapoints that hardware failed to capture. Particularly, K-Nearest Neighbors (KNN) imputation is a method used to impute missing values by finding the K closest observations and using their respective values to ‘fill in’ the missing ones. In the application of ECG processing, this method of imputation is beneficial as it accounts for the temporal structure of the data, making KNN imputation a natural choice.
+
+The chosen implementation uses a 3rd order, lowpass Butterworth filter with a cutoff frequency of 50 Hz. 50Hz was found to be the optimal amount as observable high-frequency artifacts from power line interference and EMG were removed without limiting the low-frequency salient information. Lowering this cut-off frequency further resulted in distortion to the amplitude of the peaks, which would have adversely affected the prediction model’s performance. 
+
+<img alt="ECG_filter" src="media/ECG_filter.png" width="600"/>
+
+
 
 #### Findings & Changes
+Testing different filters and parameters was largely trial and error testing. Lowpass, high pass, bandpass, and notch filters were all tested, adjusting cut-off frequencies and passbands as appropriate. 
 
+High pass and bandpass filters were susceptible to baseline wander, from samples 4,000 – 5,000 that the signal baseline drifts upwards. The high pass was also unable to filter out the high-frequency noise induced by Electromyography muscular activity (EMG), motion artifacts, and residual channel noise. The clear choice was lowpass as it maintains the salient, low-frequency information without distorting the signal with baseline wander. 
+
+<img alt="ECG_filter_types" src="media/ECG_filter_types.png" width="600"/>
+
+There lies uncertainty in the exclusive use of lowpass to filter out noise, as a bandpass and a notch filter ensemble are standard for ECG data.  Solely relying on low-pass filters is not a common approach, however, the final product was sufficient for the classification models to perform adequately. 
 
 ---------------
 
@@ -83,7 +110,7 @@ A sliding window of 6 seconds per beat segment is used to capture the current be
 
 Heartbeat voltages range among individuals depending on anatomy, body composition, blood volume, and ECG lead placement. Z-score normalization standardizes values into how much each reading deviates from the mean of all readings within the sample window
 
-In order to create the dataset locally, run 'arrhythmia_data.py'.
+In order to create the dataset locally, run 'Models and Prediction/arrhythmia_data.py'.
 
 <img alt="arr_data_comparison" src="media/arr_data_comparison.png" width="600"/>
 
@@ -100,7 +127,7 @@ The dataset has few features, but lots of records. This is perfect for DL models
 
 The model was trained on three passings of the training data (epochs). Accuracy decreased, loss increased, and overfitting began to occur beyond this point. 
 
-In order to replicate the model, run 'arrhythmia_model.py'
+In order to replicate the model, run 'Models and Prediction/arrhythmia_model.py'.
 
 <img alt="CNN_loss" src="media/CNN_v4_acc_loss.png" width="600"/>
 
@@ -134,6 +161,8 @@ The holdout set primarily sought to encompass ~3 unseen subjects, consequentiall
 
 Twenty-three classification models were then assessed using the LazyPredict Python library, indicating Guassian Naive Bayes provides the best time/accuracy trade-off.
 
+In order to replicate the model, run 'Models and Prediction/stress_model.py'.
+
 <img alt="stress_comparison" src="media/stress_comparison.png" width="600"/>
 
 #### Findings & Changes
@@ -165,4 +194,5 @@ Nonetheless, results are satisfactory for obtaining real-time assessments. Stres
 
 ## Replication 
 
+Clone the repositiry to you local machine and run:
 'ECG_Li\Models and Prediction\gui.py'
