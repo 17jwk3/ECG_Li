@@ -14,10 +14,13 @@ Computational advancements have increased the ability to concurrently predict an
 ## Design and Implementaiton
 
 Low-cost ECG (electrocardiogram) electrodes using a 3 lead configuraiton are used to capture impulses through the heart muscles and transmit the information via Bluetooth to a machine-learning algorithm in real-time to provide actionable feedback on potential abnormalities and stress levels via a Graphical User Interface, as seen in the following implementation pipeline.
-<img alt="Solution Pipeline" src="media/Solution Pipeline.PNG" width="600"/>
+
+<img alt="Pipeline" src="media/Solution Pipeline.PNG" width="600"/>
+
 ---------------
 
-### Hardware
+### Hardware @17jwk3
+
 The PCB uses a ESP32-C3-MINI-1-N4, a Li-Po with a battery charging module and a buck conmverter to supply 3.3V to the rest of the components. 
 The main ECG components are an AD8232 opAmp board utilized for reading the electrical signals of the wearers heart and jack port for the 3 leads. 
 
@@ -39,15 +42,11 @@ The schematic, featuring over charge and discharge protection, switches to contr
 <img alt="Layer 4" src="media/schematic.PNG" width="600"/>
 
 
-# Findings, Changes
+#### Findings, Changes
 
-I did not know the ESP32 module I chose was a "standard" component for JLCPCB which means it costed much more to manufacture this board then originally anticipated.
- 
-Going forward I would choose a chip that does not require "standard" assembly. 
+The selected ESP32 module was a "standard" component for JLCPCB which means it costed much more to manufacture this board then originally anticipated. A chip that does not require "standard" assembly would be selected going forward. 
 
-With more time I would like to integrate the AD8232 module onto the board and overall make the board more compact with a very small lipo battery. I would also like to make it cleaner, more LEDs for feedback etc. 
+With more time, the AD8232 module would be integrated onto the board to increase portability with a very small lipo battery. Additional changes would be made to optimize the layout, add more LEDs for feedback etc. 
 
-t been tested but I will be following up on the findings for that as well. 
-
-My first initial thoughts is I may have needed to include a pulldown resistor for the output of the AD8232. 
+The output of the AD8232 may have needed to include a pulldown resistor. 
 
