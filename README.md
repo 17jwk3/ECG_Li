@@ -15,7 +15,7 @@ Computational advancements have increased the ability to concurrently predict an
 
 Low-cost ECG (electrocardiogram) electrodes using a 3 lead configuraiton are used to capture impulses through the heart muscles and transmit the information via Bluetooth to a machine-learning algorithm in real-time to provide actionable feedback on potential abnormalities and stress levels via a Graphical User Interface, as seen in the following implementation pipeline.
 
-<img alt="Pipeline" src="media/Solution Pipeline.PNG" width="600"/>
+<img alt="pipeline" src="media/pipeline.png" width="600"/>
 
 ---------------
 
@@ -50,3 +50,33 @@ With more time, the AD8232 module would be integrated onto the board to increase
 
 The output of the AD8232 may have needed to include a pulldown resistor. 
 
+
+---------------
+
+### Data Acquisition @17jwk3
+
+
+---------------
+
+### Processing and Filtering @CTy27
+
+
+---------------
+
+### Arrhythmia Detection @alexkoch14
+
+
+---------------
+
+### Stress Detection @alexkoch14
+
+
+---------------
+
+### Graphical User Interface @CTy27
+
+
+
+## Replication 
+
+'ECG_Li\Models and Prediction\gui.py'
