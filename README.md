@@ -110,7 +110,7 @@ Heartbeats in the first or last 3 seconds of the half-hour recording are ignored
 A sliding window of 6 seconds per beat segment is used to capture the current beat and those adjacent to retain enough information from encompassed patterns ensuring a 2-3 beat overlap. 
 The following graph demonstrates that encoded abnormal beats (those other than ‘N’, later encoded to 1) yield an even distribution, thus eliminating the need for resampling. 
 
-<img alt="arr_distribution" src="media/arr_distribution.png" width="600"/>
+<img alt="arr_distribution" src="media/arr_distribution.jpg" width="600"/>
 
 Heartbeat voltages range among individuals depending on anatomy, body composition, blood volume, and ECG lead placement. Z-score normalization standardizes values into how much each reading deviates from the mean of all readings within the sample window.
 
